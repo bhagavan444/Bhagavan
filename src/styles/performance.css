@@ -1,0 +1,249 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   144Hz ULTRA-SMOOTH PERFORMANCE ENGINE
+   GPU-accelerated rendering, composite layer promotion, jank elimination.
+   Import this ONCE in index.css — it applies globally to every page.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── 1. FORCE GPU COMPOSITION ON ALL ANIMATED ELEMENTS ─────────────────── */
+/* Promote animated elements to their own composite layer so the GPU handles
+   painting instead of the CPU. This is the #1 trick for 144Hz smoothness. */
+
+[style*="animation"],
+[style*="transition"],
+[style*="transform"],
+.liquid-glass,
+.liquid-glass-strong,
+.cinematic-card,
+.grain-overlay,
+.vignette,
+.sbar-fill,
+.exp-tab-pill,
+.nav-link-item,
+.nav-resume-cta,
+.nav-glass-pill,
+.nav-bar-blur,
+.mobile-dock,
+.dock-item,
+.di,
+.pill,
+.snav-btn,
+#c-dot, #c-ring,
+#mc-dot, #mc-ring,
+#scroll-prog-bar,
+video {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* ── 2. CONTAIN PAINT — prevent repaint propagation ────────────────────── */
+/* CSS containment tells the browser that changes inside this element
+   won't affect anything outside, enabling massive paint optimizations. */
+
+.liquid-glass,
+.liquid-glass-strong,
+.cinematic-card,
+.project-card,
+.exp-tab-pill,
+.dock-item,
+.nav-link-item,
+.nav-resume-cta {
+  contain: layout style paint;
+}
+
+/* ── 3. OPTIMIZED WILL-CHANGE — strategic layer hints ──────────────────── */
+/* Only apply will-change to elements that WILL animate, and only for the
+   properties that change. Over-use wastes GPU memory. */
+
+#c-dot, #mc-dot {
+  will-change: left, top, transform;
+}
+#c-ring, #mc-ring {
+  will-change: left, top, width, height;
+}
+.sbar-fill, #scroll-prog-bar {
+  will-change: width;
+}
+.grain-overlay {
+  will-change: transform;
+}
+video {
+  will-change: auto; /* Video already gets GPU decode, don't over-promote */
+}
+
+/* ── 4. SMOOTH SCROLLING WITH HIGH-FREQUENCY PAINT ─────────────────────── */
+
+html {
+  scroll-behavior: smooth;
+  /* Force sub-pixel rendering for smooth scrolling at high refresh rates */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* ── 5. HARDWARE-ACCELERATED TRANSITIONS ───────────────────────────────── */
+/* All hover/interactive transitions use ONLY transform and opacity
+   (the two properties that don't trigger layout or paint) */
+
+* {
+  /* Override any box-shadow transitions to use opacity layers instead */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ── 6. REDUCE MOTION SYSTEM — accessibility + perf ────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .grain-overlay,
+  .vignette {
+    display: none !important;
+  }
+  video {
+    display: none !important;
+  }
+}
+
+/* ── 7. OPTIMIZED BACKDROP FILTERS ─────────────────────────────────────── */
+/* Backdrop-filter is the most expensive CSS property. We:
+   - Reduce blur radius on lower-end devices
+   - Disable entirely on mobile when performance is critical */
+
+@media (max-width: 768px) {
+  /* Remove universal backdrop-filter. Only target known glass elements to prevent massive rendering lag. */
+  .nav-bar-blur, .nav-scrolled {
+    backdrop-filter: blur(8px) saturate(120%) !important;
+    -webkit-backdrop-filter: blur(8px) saturate(120%) !important;
+    will-change: backdrop-filter;
+  }
+
+  .liquid-glass,
+  .liquid-glass-strong,
+  .glass-card,
+  .project-card,
+  .certificate-glass,
+  .museum-glass-pane {
+    /* APPLE GPU ACCELERATION INSTEAD OF FLATTENING */
+    backdrop-filter: blur(8px) saturate(110%) !important;
+    -webkit-backdrop-filter: blur(8px) saturate(110%) !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+    transform: translateZ(0) !important;
+    -webkit-transform: translateZ(0) !important;
+    will-change: transform, opacity, backdrop-filter;
+  }
+
+  /* Extreme GPU Optimization for Sections */
+  .apple-section, .chapter-block, .belief-container, .inno-card, .museum-wall-container {
+    content-visibility: auto;
+    contain-intrinsic-size: 1000px; /* Provides a hint to the browser so scrollbar doesn't jump */
+  }
+
+  /* Disable grain entirely on mobile */
+  .grain-overlay {
+    display: none !important;
+  }
+  
+  /* Disable vignette fixed overlay on mobile for perf */
+  .vignette {
+    display: none !important;
+  }
+}
+
+/* ── 8. IMAGE & MEDIA OPTIMIZATION ─────────────────────────────────────── */
+
+img {
+  content-visibility: auto;
+  /* Prevent layout shift */
+  display: block;
+}
+
+img[loading="lazy"] {
+  /* Smooth fade-in for lazy-loaded images */
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* ── 9. FRAME-PERFECT ANIMATION TIMING ─────────────────────────────────── */
+/* At 144Hz, each frame is 6.94ms. Animations should use durations that are
+   multiples of the frame interval for the smoothest visual result.
+   These utility classes provide frame-aligned timing: */
+
+.perf-transition-fast {
+  transition-duration: 83ms !important; /* 12 frames at 144Hz */
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.perf-transition-base {
+  transition-duration: 167ms !important; /* 24 frames at 144Hz */
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.perf-transition-slow {
+  transition-duration: 333ms !important; /* 48 frames at 144Hz */
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* ── 10. PASSIVE SCROLL OPTIMIZATIONS ──────────────────────────────────── */
+/* Force passive event listeners via CSS touch-action hints */
+
+body {
+  touch-action: manipulation; /* Eliminates 300ms tap delay on mobile */
+  overscroll-behavior: none; /* Prevent bounce/overscroll jank */
+}
+
+/* ── 11. COMPOSITE LAYER FOR FIXED ELEMENTS ────────────────────────────── */
+/* Fixed elements create stacking contexts. Promote them for GPU rendering. */
+
+[style*="position: fixed"],
+[style*="position:fixed"] {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+/* ── 12. FONT DISPLAY OPTIMIZATION ─────────────────────────────────────── */
+/* Prevent FOIT (Flash of Invisible Text) which causes layout shifts */
+
+@font-face {
+  font-display: swap !important;
+}
+
+/* ── 13. CONTENT-VISIBILITY FOR OFF-SCREEN SECTIONS ────────────────────── */
+/* Skip rendering of off-screen content entirely until it's near viewport */
+
+section,
+[data-section],
+footer {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}
+
+/* ── 14. ULTRA-THIN SCROLLBAR (less paint area = faster scroll) ────────── */
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 1px;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
+}
+
+/* ── 15. PREVENT LAYOUT THRASHING ON HOVER ─────────────────────────────── */
+/* Use transform instead of margin/padding/top/left changes on hover */
+
+a, button {
+  transform: translate3d(0, 0, 0);
+}

@@ -1,0 +1,599 @@
+/* Apple Product Presentation Style - 2026 Philosophy */
+
+/* Base Reset & Variables */
+:root {
+  --apple-bg: #fbfbfd;
+  --apple-text: #1d1d1f;
+  --apple-text-secondary: #86868b;
+  --apple-dark-bg: #000000;
+  --apple-dark-text: #f5f5f7;
+  --apple-dark-secondary: #a1a1a6;
+  --font-system: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.work-container {
+  background-color: var(--apple-bg);
+  color: var(--apple-text);
+  
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography Scale */
+h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Layout Utilities */
+.work-section {
+  padding: 180px 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.work-section.full-width {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.content-constrain {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.center-align {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dark-environment {
+  background-color: var(--apple-dark-bg);
+  color: var(--apple-dark-text);
+}
+
+.alt-bg {
+  background-color: #f5f5f7;
+}
+
+/* 1. MASSIVE HERO */
+.hero-section {
+  min-height: 100vh;
+  padding-top: 15vh;
+  padding-bottom: 0;
+  justify-content: flex-start;
+}
+
+.hero-content {
+  text-align: center;
+  z-index: 2;
+}
+
+.hero-headline {
+  font-size: clamp(60px, 10vw, 140px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  color: var(--apple-text);
+}
+
+.hero-subheadline {
+  font-size: clamp(24px, 4vw, 40px);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  color: var(--apple-text-secondary);
+  margin-top: 32px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-cinematic-visual {
+  width: 100%;
+  height: 60vh;
+  margin-top: 80px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ambient-glow {
+  width: 60vw;
+  height: 60vw;
+  max-width: 800px;
+  max-height: 800px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,0,0,0.03) 0%, rgba(251,251,253,0) 70%);
+  position: absolute;
+  top: 0;
+}
+
+/* 2. THE VISION */
+.vision-section {
+  padding: 240px 24px;
+  background-color: #fff;
+}
+
+.vision-headline {
+  font-size: clamp(48px, 6vw, 80px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--apple-text-secondary);
+}
+
+.vision-headline .highlight-text {
+  color: var(--apple-text);
+}
+
+/* 3. CAREEROS PLATFORM */
+.careeros-section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: #f5f5f7;
+}
+
+.product-title {
+  font-size: clamp(48px, 8vw, 100px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+}
+
+.product-subtitle {
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 600;
+  color: var(--apple-text-secondary);
+  letter-spacing: -0.015em;
+  margin-bottom: 32px;
+}
+
+.product-description {
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--apple-text-secondary);
+  max-width: 700px;
+}
+
+.large-product-visualization {
+  width: 100%;
+  max-width: 1400px;
+  margin: 100px auto 100px;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.large-product-visualization img {
+  width: 100%;
+  height: auto;
+  border-radius: 32px;
+  box-shadow: 0 40px 120px rgba(0,0,0,0.1);
+  display: block;
+}
+
+.ecosystem-modules {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.ecosystem-module {
+  padding: 32px;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+}
+
+.ecosystem-module h4 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--apple-text);
+}
+
+.ecosystem-module p {
+  font-size: 18px;
+  color: var(--apple-text-secondary);
+  line-height: 1.4;
+}
+
+/* 4. HOW IT THINKS */
+.how-it-thinks-section {
+  padding: 200px 0;
+  overflow: hidden;
+}
+
+.section-eyebrow {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--apple-text-secondary);
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.horizontal-story-scroll {
+  width: 100%;
+  padding: 0 24px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.horizontal-story-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.story-track {
+  display: flex;
+  gap: 40px;
+  min-width: max-content;
+  padding: 40px 0;
+}
+
+.story-step {
+  width: 400px;
+  padding: 40px;
+  background: #fff;
+  border-radius: 32px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.step-num {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--apple-text-secondary);
+  margin-bottom: 24px;
+}
+
+.story-step h3 {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.story-step p {
+  font-size: 20px;
+  color: var(--apple-text-secondary);
+  line-height: 1.5;
+}
+
+/* 5. SUPPORTING PRODUCTS */
+.product-journey-title {
+  margin-bottom: 80px;
+}
+
+.supporting-products-section {
+  padding: 0;
+}
+
+.product-block {
+  padding: 200px 0;
+  width: 100%;
+}
+
+.secondary-product-title {
+  font-size: clamp(40px, 6vw, 80px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.secondary-product-title.dark {
+  color: var(--apple-dark-text);
+}
+
+.secondary-product-desc {
+  font-size: clamp(20px, 3vw, 32px);
+  font-weight: 500;
+  color: var(--apple-text-secondary);
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.secondary-product-desc.dark {
+  color: var(--apple-dark-secondary);
+}
+
+.product-visual {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.06);
+  background-color: #fff;
+}
+
+.product-visual.no-bg {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.product-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* 6. ENGINEERING EXCELLENCE */
+.engineering-section {
+  padding: 200px 0;
+}
+
+.glass-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+.glass-panel {
+  padding: 24px 40px;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.glass-panel:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* 7. IMPACT METRICS */
+.impact-section {
+  padding-top: 160px;
+  padding-bottom: 160px;
+  background-color: #f5f5f7;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 100px;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: clamp(80px, 12vw, 180px);
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  color: var(--apple-text);
+}
+
+.stat-label {
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 600;
+  color: var(--apple-text-secondary);
+  margin-top: 16px;
+}
+
+/* 8. TIMELINE */
+.timeline-section {
+  padding: 200px 0;
+  background-color: #fff;
+}
+
+.vertical-timeline {
+  margin-top: 100px;
+  padding-left: 50%;
+  position: relative;
+}
+
+.vertical-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: rgba(0,0,0,0.1);
+  transform: translateX(-50%);
+}
+
+.timeline-nodes {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.timeline-node {
+  position: relative;
+  width: 50%;
+  padding-left: 40px;
+}
+
+.timeline-node::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background: var(--apple-text-secondary);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  border: 4px solid #fff;
+  z-index: 2;
+}
+
+.timeline-node h4 {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--apple-text-secondary);
+}
+
+.timeline-node.highlight::before {
+  background: #0071e3;
+  width: 24px;
+  height: 24px;
+  box-shadow: 0 0 20px rgba(0,113,227,0.4);
+}
+
+.timeline-node.highlight h4 {
+  color: var(--apple-text);
+  font-size: 40px;
+}
+
+.timeline-node.future::before {
+  background: transparent;
+  border-color: rgba(0,0,0,0.2);
+}
+
+/* 9. CAREEROS FUTURE */
+.future-section {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.section-title {
+  font-size: clamp(40px, 6vw, 80px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.section-title.dark {
+  color: var(--apple-dark-text);
+}
+
+.future-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+.future-item h4 {
+  font-size: clamp(32px, 5vw, 64px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--apple-dark-secondary);
+  transition: color 0.4s ease;
+  cursor: default;
+}
+
+.future-item:hover h4 {
+  color: var(--apple-dark-text);
+}
+
+/* 10. FINAL STATEMENT */
+.final-statement-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cinematic-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.05) 0%, rgba(0,0,0,1) 80%);
+  z-index: 1;
+}
+
+.final-content {
+  z-index: 2;
+}
+
+.editorial-headline {
+  font-size: clamp(40px, 6vw, 80px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  max-width: 800px;
+  margin-bottom: 48px;
+}
+
+.editorial-headline.dark {
+  color: var(--apple-dark-text);
+}
+
+.editorial-body {
+  font-size: clamp(24px, 4vw, 40px);
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--apple-text-secondary);
+  max-width: 800px;
+}
+
+.editorial-body.dark {
+  color: var(--apple-dark-secondary);
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+  .work-section {
+    padding: 120px 24px;
+  }
+  
+  .hero-section {
+    padding-top: 20vh;
+  }
+  
+  .product-block {
+    padding: 120px 0;
+  }
+  
+  .impact-grid {
+    grid-template-columns: 1fr;
+    gap: 80px;
+  }
+  
+  .story-step {
+    width: 300px;
+  }
+  
+  .glass-panel {
+    font-size: 18px;
+    padding: 16px 24px;
+  }
+  
+  .vertical-timeline {
+    padding-left: 32px;
+  }
+  
+  .vertical-timeline::before {
+    left: 16px;
+  }
+  
+  .timeline-node {
+    width: 100%;
+    padding-left: 24px;
+  }
+  
+  .timeline-node::before {
+    left: 0;
+  }
+}

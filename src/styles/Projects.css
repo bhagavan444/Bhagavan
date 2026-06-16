@@ -1,0 +1,518 @@
+/* === 🔄 Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #0d0026;
+  color: #f0f0f5;
+  
+  overflow-x: hidden;
+}
+
+/* === 📚 Projects Container === */
+.projects-container {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(4rem, 7vw, 5rem) clamp(1.5rem, 3vw, 2.5rem);
+  width: 100vw;
+  background: linear-gradient(135deg, #1e003b, #003366);
+  background-size: 300% 300%;
+  animation: gradientFlow 15s ease-in-out infinite;
+  z-index: 1;
+  
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* === 🌌 Background Effects === */
+.projects-container::before {
+  content: "";
+  position: absolute;
+  inset: -100px;
+  width: 200%;
+  height: 200%;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(0, 255, 204, 0.25), transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(255, 51, 153, 0.25), transparent 50%);
+  z-index: -1;
+  animation: rotateGlow 20s linear infinite;
+  pointer-events: none;
+  filter: blur(2px);
+}
+
+@keyframes rotateGlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* === 🌊 Wave Overlay === */
+.wave-overlay {
+  position: absolute;
+  inset: 0;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(0,255,204,0.1)" fill-opacity="0.3" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,117.3C672,107,768,117,864,122.7C960,128,1056,128,1152,122.7C1248,117,1344,107,1392,101.3L1440,96V320H1392C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320H0V96Z"/></svg>') repeat-x bottom;
+  height: 100%;
+  animation: waveFlow 12s linear infinite;
+  z-index: -1;
+  pointer-events: none;
+}
+
+@keyframes waveFlow {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(15px); }
+  100% { transform: translateY(0); }
+}
+
+/* === 🌟 Header === */
+.projects-header {
+  text-align: center;
+  margin-bottom: clamp(3rem, 5vw, 4.5rem);
+  position: relative;
+  z-index: 2;
+}
+
+.projects-title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  background: linear-gradient(90deg, #00ffcc, #ff33cc, #00ffcc);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 20px rgba(0, 255, 204, 0.6);
+  animation: gradientFlow 3s linear infinite, titleFloat 2s ease-in-out infinite;
+}
+
+@keyframes titleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.intro-text {
+  font-size: clamp(0.95rem, 2vw, 1.2rem);
+  max-width: clamp(500px, 80vw, 800px);
+  margin: clamp(1rem, 2vw, 1.5rem) auto clamp(1.5rem, 3vw, 2.5rem);
+  text-align: center;
+  line-height: 1.8;
+  color: #d1d5db;
+  animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === 🔧 Filter Bar === */
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: clamp(1rem, 2vw, 1.5rem);
+  margin-bottom: clamp(2rem, 3vw, 3rem);
+  flex-wrap: wrap;
+  z-index: 2;
+}
+
+.filter-btn {
+  padding: clamp(0.6rem, 1.5vw, 0.8rem) clamp(1.2rem, 2vw, 1.6rem);
+  border: none;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  color: #f0f0f5;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: linear-gradient(135deg, #00ffcc, #ff33cc);
+  color: #0d0026;
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(0, 255, 204, 0.5);
+}
+
+/* === 🌐 Projects Grid === */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(280px, 35vw, 350px), 1fr));
+  gap: clamp(2rem, 3vw, 3.5rem);
+  width: 100%;
+  max-width: clamp(900px, 95vw, 1400px);
+  z-index: 2;
+  padding: clamp(1.5rem, 2vw, 2rem);
+}
+
+/* === 🛡️ Project Card === */
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 255, 204, 0.1);
+  border-radius: clamp(1.5rem, 2vw, 2rem);
+  padding: clamp(1.5rem, 2.5vw, 2.5rem);
+  color: #f0f0f5;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  animation: cardEnter 1s ease-out;
+  will-change: transform, box-shadow;
+  contain: paint;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 45deg, rgba(0, 255, 204, 0.2), rgba(255, 51, 153, 0.2), transparent);
+  animation: rotateGlow 20s linear infinite;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+@keyframes cardEnter {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(0, 255, 204, 0.15);
+}
+
+/* === 🚀 Card Content === */
+.project-card h3 {
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  font-weight: 800;
+  margin-bottom: clamp(0.8rem, 1.5vw, 1.5rem);
+  background: linear-gradient(90deg, #00ffcc, #ff33cc);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 10px rgba(0, 255, 204, 0.4);
+}
+
+.project-card p {
+  font-size: clamp(0.85rem, 1.5vw, 1.1rem);
+  line-height: 1.7;
+  color: #d1d5db;
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+}
+
+.tech-used {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(0.6rem, 1vw, 0.8rem);
+  margin-top: clamp(1rem, 1.5vw, 1.5rem);
+}
+
+.tech-badge {
+  padding: clamp(0.3rem, 0.8vw, 0.4rem) clamp(0.7rem, 1.2vw, 0.9rem);
+  border-radius: 999px;
+  font-size: clamp(0.7rem, 1.2vw, 0.9rem);
+  background: rgba(255, 255, 255, 0.1);
+  color: #f0f0f5;
+  border: 1px solid rgba(0, 255, 204, 0.15);
+  transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+  background: linear-gradient(135deg, #00ffcc, #ff33cc);
+  color: #0d0026;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.4);
+}
+
+.visit-btn,
+.demo-btn {
+  display: inline-block;
+  margin-top: clamp(1rem, 1.5vw, 1.5rem);
+  padding: clamp(0.6rem, 1vw, 0.75rem) clamp(1.2rem, 2vw, 1.6rem);
+  font-weight: bold;
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  color: #0d0026;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #00ffcc, #ff33cc);
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0, 255, 204, 0.4);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.visit-btn:hover,
+.demo-btn:hover {
+  transform: scale(1.1);
+  background: linear-gradient(90deg, #00cc99, #cc33aa);
+  box-shadow: 0 12px 40px rgba(0, 255, 204, 0.6);
+}
+
+/* === 🎥 Video Overlay === */
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 1001;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-container {
+  position: relative;
+  width: clamp(300px, 80vw, 800px);
+  max-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  border-radius: clamp(12px, 2vw, 16px);
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+  object-fit: contain;
+}
+
+.close-btn {
+  position: absolute;
+  top: clamp(0.8rem, 1.8vw, 1.2rem);
+  right: clamp(0.8rem, 1.8vw, 1.2rem);
+  background: transparent;
+  border: none;
+  color: #f0f0f5;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.close-btn:hover {
+  transform: scale(1.2) rotate(90deg);
+  color: #00ffcc;
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 1024px) {
+  .projects-container {
+    padding: clamp(3rem, 6vw, 4rem) clamp(1.2rem, 2.5vw, 2rem);
+  }
+
+  .projects-title {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    margin-bottom: clamp(2.5rem, 4vw, 3.5rem);
+  }
+
+  .projects-grid {
+    gap: clamp(1.8rem, 2.5vw, 2.5rem);
+  }
+
+  .project-card {
+    padding: clamp(1.2rem, 2vw, 2rem);
+    border-radius: clamp(1.2rem, 1.8vw, 1.5rem);
+  }
+
+  .project-card h3 {
+    font-size: clamp(1.3rem, 2vw, 1.6rem);
+  }
+
+  .project-card p {
+    font-size: clamp(0.8rem, 1.3vw, 1rem);
+  }
+
+  .tech-badge {
+    font-size: clamp(0.65rem, 1vw, 0.8rem);
+    padding: clamp(0.25rem, 0.7vw, 0.3rem) clamp(0.6rem, 1vw, 0.8rem);
+  }
+
+  .visit-btn,
+  .demo-btn {
+    font-size: clamp(0.8rem, 1.2vw, 0.9rem);
+    padding: clamp(0.5rem, 0.9vw, 0.65rem) clamp(1rem, 1.8vw, 1.3rem);
+  }
+
+  .filter-bar {
+    gap: clamp(0.8rem, 1.5vw, 1rem);
+    margin-bottom: clamp(1.8rem, 2.5vw, 2.5rem);
+  }
+
+  .filter-btn {
+    padding: clamp(0.5rem, 1vw, 0.6rem) clamp(1rem, 1.8vw, 1.3rem);
+    font-size: clamp(0.85rem, 1.2vw, 0.95rem);
+  }
+
+  .video-container {
+    width: clamp(280px, 75vw, 600px);
+  }
+
+  .video {
+    border-radius: clamp(10px, 1.5vw, 12px);
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-container {
+    padding: clamp(2.5rem, 5vw, 3rem) clamp(1rem, 2vw, 1.5rem);
+  }
+
+  .projects-title {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: clamp(2rem, 3.5vw, 3rem);
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    gap: clamp(1.5rem, 2vw, 2rem);
+    padding: clamp(1rem, 1.5vw, 1.5rem);
+  }
+
+  .project-card {
+    padding: clamp(1rem, 1.8vw, 1.8rem);
+    border-radius: clamp(1rem, 1.5vw, 1.2rem);
+  }
+
+  .project-card h3 {
+    font-size: clamp(1.2rem, 1.8vw, 1.4rem);
+  }
+
+  .project-card p {
+    font-size: clamp(0.75rem, 1.2vw, 0.95rem);
+    margin-bottom: clamp(0.8rem, 1.5vw, 1rem);
+  }
+
+  .tech-badge {
+    font-size: clamp(0.6rem, 1vw, 0.75rem);
+    padding: clamp(0.2rem, 0.6vw, 0.25rem) clamp(0.5rem, 0.9vw, 0.6rem);
+  }
+
+  .visit-btn,
+  .demo-btn {
+    font-size: clamp(0.75rem, 1.1vw, 0.85rem);
+    padding: clamp(0.4rem, 0.8vw, 0.6rem) clamp(0.9rem, 1.5vw, 1.2rem);
+    margin-top: clamp(0.8rem, 1.2vw, 1rem);
+  }
+
+  .filter-bar {
+    gap: clamp(0.6rem, 1vw, 1rem);
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: clamp(0.4rem, 0.8vw, 0.5rem);
+  }
+
+  .filter-btn {
+    padding: clamp(0.4rem, 0.8vw, 0.5rem) clamp(0.8rem, 1.5vw, 1rem);
+    font-size: clamp(0.75rem, 1vw, 0.85rem);
+  }
+
+  .video-container {
+    width: clamp(250px, 90vw, 500px);
+  }
+
+  .video {
+    border-radius: clamp(8px, 1.2vw, 10px);
+  }
+
+  .close-btn {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+  }
+
+  .projects-container::before {
+    inset: -50px;
+    width: 150%;
+    height: 150%;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-container {
+    padding: clamp(2rem, 4vw, 2.5rem) clamp(0.8rem, 1.5vw, 1.2rem);
+  }
+
+  .projects-title {
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    margin-bottom: clamp(1.8rem, 3vw, 2.5rem);
+  }
+
+  .projects-grid {
+    gap: clamp(1.2rem, 1.8vw, 1.5rem);
+  }
+
+  .project-card {
+    padding: clamp(0.8rem, 1.5vw, 1.5rem);
+    border-radius: clamp(0.8rem, 1.2vw, 1rem);
+  }
+
+  .project-card h3 {
+    font-size: clamp(1.1rem, 1.6vw, 1.2rem);
+  }
+
+  .project-card p {
+    font-size: clamp(0.7rem, 1.1vw, 0.9rem);
+  }
+
+  .tech-badge {
+    font-size: clamp(0.55rem, 0.9vw, 0.7rem);
+    padding: clamp(0.2rem, 0.5vw, 0.25rem) clamp(0.4rem, 0.8vw, 0.5rem);
+  }
+
+  .visit-btn,
+  .demo-btn {
+    font-size: clamp(0.7rem, 1vw, 0.8rem);
+    padding: clamp(0.4rem, 0.7vw, 0.5rem) clamp(0.8rem, 1.2vw, 1rem);
+  }
+
+  .filter-bar {
+    gap: clamp(0.5rem, 0.8vw, 0.8rem);
+  }
+
+  .filter-btn {
+    padding: clamp(0.3rem, 0.7vw, 0.4rem) clamp(0.6rem, 1.2vw, 0.8rem);
+    font-size: clamp(0.7rem, 0.9vw, 0.75rem);
+  }
+
+  .video-container {
+    width: clamp(200px, 95vw, 400px);
+  }
+
+  .video {
+    border-radius: clamp(6px, 1vw, 8px);
+  }
+
+  .close-btn {
+    font-size: clamp(0.9rem, 1.8vw, 1.2rem);
+  }
+}

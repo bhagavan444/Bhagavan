@@ -1,0 +1,256 @@
+/* Apple Product Presentation Style - 2026 Resume Reveal */
+
+/* Base Variables */
+:root {
+  --res-bg: #fbfbfd;
+  --res-text: #1d1d1f;
+  --res-text-secondary: #86868b;
+  --res-dark-bg: #000000;
+  --res-dark-text: #f5f5f7;
+  --res-dark-secondary: #a1a1a6;
+  --font-system: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.resume-container {
+  background-color: var(--res-bg);
+  color: var(--res-text);
+  
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Layout Utilities */
+.res-section {
+  padding: 200px 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.res-section.full-width {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.res-content-constrain {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.center-align {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.res-dark-environment {
+  background-color: var(--res-dark-bg);
+  color: var(--res-dark-text);
+}
+
+.res-alt-bg {
+  background-color: #f5f5f7;
+}
+
+/* Typography */
+.res-headline-massive {
+  font-size: clamp(60px, 12vw, 150px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  margin: 0;
+}
+
+.res-headline-large {
+  font-size: clamp(40px, 8vw, 100px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin: 0 0 24px 0;
+}
+
+.res-subheadline {
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  color: var(--res-text-secondary);
+  margin: 0;
+}
+
+.res-body-text {
+  font-size: clamp(22px, 3vw, 36px);
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--res-text-secondary);
+  margin: 0;
+}
+
+.dark-text { color: var(--res-dark-text); }
+.dark-text-sec { color: var(--res-dark-secondary); }
+
+/* Editorial Typographic Lists (No Cards) */
+.res-typographic-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 60px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.res-type-item {
+  font-size: clamp(32px, 5vw, 64px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--res-text);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: 24px;
+}
+
+.res-type-item.accent {
+  color: #0066cc;
+}
+
+/* Museum Quality Artifact - The Resume Image */
+.resume-artifact-wrapper {
+  margin-top: 80px;
+  width: 100%;
+  max-width: 1000px;
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+}
+
+.resume-artifact {
+  width: 100%;
+  border-radius: 24px;
+  box-shadow: 
+    0 40px 100px rgba(0, 0, 0, 0.1),
+    0 10px 40px rgba(0, 0, 0, 0.06),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+}
+
+.resume-artifact:hover {
+  transform: scale(1.02) translateY(-10px);
+  box-shadow: 
+    0 60px 120px rgba(0, 0, 0, 0.15),
+    0 20px 60px rgba(0, 0, 0, 0.08),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+/* Premium Download Pill */
+.download-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: #1d1d1f;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 20px 48px;
+  border-radius: 100px;
+  text-decoration: none;
+  margin-top: 60px;
+  transition: transform 0.4s ease, opacity 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.download-pill:hover {
+  transform: scale(1.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* Explore CTA Buttons */
+.explore-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 60px;
+}
+
+.explore-pill {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  color: var(--res-dark-text);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 16px 40px;
+  border-radius: 100px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.explore-pill:hover {
+  background-color: #ffffff;
+  color: #000000;
+  transform: scale(1.05);
+}
+
+/* Journey Flow Nodes */
+.journey-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 60px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.journey-node {
+  font-size: clamp(24px, 4vw, 48px);
+  font-weight: 600;
+  color: var(--res-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.journey-node.active {
+  color: var(--res-text);
+}
+
+.journey-node::before {
+  content: '';
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--res-text-secondary);
+  transition: background-color 0.3s ease;
+}
+
+.journey-node.active::before {
+  background-color: #0066cc;
+}
+
+/* Sections */
+.res-hero {
+  min-height: 100vh;
+  justify-content: center;
+  padding-top: 0;
+}
+
+.final-statement-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .res-section { padding: 150px 24px; }
+  .resume-artifact { border-radius: 12px; }
+}

@@ -1,0 +1,419 @@
+/* Apple Product Presentation Style - 2026 Vision Keynote */
+
+/* Base Variables */
+:root {
+  --vis-bg: #fbfbfd;
+  --vis-text: #1d1d1f;
+  --vis-text-secondary: #86868b;
+  --vis-dark-bg: #000000;
+  --vis-dark-text: #f5f5f7;
+  --vis-dark-secondary: #a1a1a6;
+  --font-system: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.vision-container {
+  background-color: var(--vis-bg);
+  color: var(--vis-text);
+  
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Layout Utilities */
+.vis-section {
+  padding: 250px 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vis-section.full-width {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.vis-content-constrain {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.center-align {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vis-dark-environment {
+  background-color: var(--vis-dark-bg);
+  color: var(--vis-dark-text);
+}
+
+.vis-alt-bg {
+  background-color: #f5f5f7;
+}
+
+.relative-z {
+  position: relative;
+  z-index: 10;
+}
+
+/* Typography */
+.vis-headline-massive {
+  font-size: clamp(60px, 12vw, 160px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  margin: 0;
+}
+
+.vis-headline-large {
+  font-size: clamp(40px, 8vw, 100px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin: 0 0 24px 0;
+}
+
+.vis-subheadline {
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  color: var(--vis-text-secondary);
+  margin: 0;
+}
+
+.vis-body-text {
+  font-size: clamp(22px, 3vw, 36px);
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--vis-text-secondary);
+  margin: 0;
+}
+
+.vis-eyebrow {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--vis-text-secondary);
+  margin-bottom: 24px;
+}
+
+.vis-eyebrow.dark-sec {
+  color: var(--vis-dark-secondary);
+}
+
+.dark-text { color: var(--vis-dark-text); }
+.dark-text-sec { color: var(--vis-dark-secondary); }
+
+/* 1. HERO SECTION (Atmospheric) */
+.vis-hero {
+  min-height: 100vh;
+  justify-content: center;
+  padding-top: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.atmospheric-hero-bg {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: radial-gradient(circle at 50% 50%, #e0e5ec 0%, #fbfbfd 100%);
+  z-index: 0;
+}
+
+.particle-layer {
+  position: absolute;
+  width: 100%; height: 100%;
+  background-image: radial-gradient(rgba(0,0,0,0.03) 1px, transparent 1px);
+}
+.layer-1 { background-size: 50px 50px; animation: floatUp 60s linear infinite; }
+.layer-2 { background-size: 80px 80px; animation: floatUp 40s linear infinite reverse; opacity: 0.5; }
+
+@keyframes floatUp {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-100%); }
+}
+
+/* 2. THE HUMAN PROBLEM & SUCCESS (Editorial Story) */
+.editorial-story {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.story-beat {
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--vis-text);
+  line-height: 1.1;
+}
+
+/* 3. THE SHIFT & FROM RESUME TO REALITY (Progression Flow) */
+.progression-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 100px;
+}
+
+.prog-node {
+  padding: 24px 60px;
+  border-radius: 60px;
+  font-size: clamp(24px, 4vw, 48px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-align: center;
+  transition: transform 0.4s ease;
+}
+
+.prog-node.past {
+  color: var(--vis-text-secondary);
+}
+
+.prog-node.current {
+  color: var(--vis-text);
+}
+
+.prog-node.future {
+  color: var(--vis-text);
+  background: #ffffff;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.02);
+}
+
+.prog-node.ultimate {
+  color: var(--vis-dark-text);
+  background: linear-gradient(90deg, #1d1d1f, #434345);
+  font-size: clamp(32px, 6vw, 64px);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.15);
+}
+
+.prog-arrow {
+  font-size: 40px;
+  color: #e5e5ea;
+}
+
+.prog-arrow.final {
+  color: var(--vis-text);
+}
+
+/* 4. WHY THIS MATTERS (Funnel Visualization) */
+.funnel-visualization {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  width: 100%;
+}
+
+.funnel-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  max-width: 800px;
+}
+
+.f-input {
+  padding: 16px 32px;
+  background: #f5f5f7;
+  border-radius: 40px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--vis-text-secondary);
+}
+
+.funnel-arrows {
+  display: flex;
+  gap: 60px;
+  margin: 40px 0;
+  font-size: 40px;
+  color: #d2d2d7;
+}
+
+.funnel-core {
+  padding: 40px 80px;
+  background: var(--vis-text);
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  border-radius: 24px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.1);
+}
+
+/* 5. CAREEROS ECOSYSTEM */
+.os-ecosystem-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 120px;
+  max-width: 1200px;
+}
+
+.os-module {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 32px 48px;
+  border-radius: 60px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.4s ease;
+}
+
+.os-module:hover {
+  transform: translateY(-5px) scale(1.02);
+  background: rgba(255,255,255,0.1);
+}
+
+/* 8. DECADE ROADMAP */
+.decade-timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.d-time-node {
+  text-align: center;
+  padding: 24px;
+}
+
+.d-year {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--vis-text-secondary);
+  margin-bottom: 8px;
+  letter-spacing: 0.05em;
+}
+
+.d-milestone {
+  font-size: clamp(32px, 5vw, 64px);
+  font-weight: 700;
+  color: var(--vis-text);
+  letter-spacing: -0.02em;
+}
+
+.d-time-node.ultimate .d-year {
+  color: var(--vis-text);
+}
+
+.d-time-node.ultimate .d-milestone {
+  background: linear-gradient(90deg, #1d1d1f, #86868b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: clamp(40px, 6vw, 80px);
+}
+
+.d-connector {
+  width: 2px;
+  height: 100px;
+  background: #e5e5ea;
+  margin: 16px 0;
+}
+
+.d-connector.dashed {
+  background: transparent;
+  border-left: 2px dashed #a1a1a6;
+}
+
+/* 10. MANIFESTO */
+.manifesto-section {
+  padding: 200px 0;
+}
+
+.manifesto-list {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.manifesto-statement {
+  font-size: clamp(40px, 7vw, 100px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--vis-text);
+  line-height: 1.05;
+  transition: color 0.4s ease;
+}
+
+.manifesto-statement:hover {
+  color: #0066cc;
+}
+
+/* 11. LETTER TO THE FUTURE */
+.museum-letter-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.museum-letter-text {
+  font-size: clamp(24px, 3.5vw, 40px);
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--vis-text);
+  margin-bottom: 48px;
+}
+
+.museum-letter-signoff {
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 600;
+  color: var(--vis-text-secondary);
+  margin-top: 80px;
+}
+
+/* 12. THE ULTIMATE VISION */
+.cinematic-future-section {
+  min-height: 100vh;
+  justify-content: center;
+}
+
+.cinematic-gradient-bg {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: radial-gradient(circle at center, #e0e5ec 0%, #fbfbfd 100%);
+  z-index: 0;
+}
+
+/* Minimal CTA */
+.minimal-cta-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid;
+  padding-bottom: 8px;
+  transition: opacity 0.3s ease;
+}
+
+.minimal-cta-link.dark-text {
+  color: var(--vis-dark-text);
+  border-color: var(--vis-dark-text);
+}
+
+.minimal-cta-link:hover {
+  opacity: 0.6;
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+  .vis-section { padding: 150px 24px; }
+  .prog-node { padding: 20px 40px; }
+  .os-module { padding: 24px 32px; font-size: 20px; }
+  .funnel-core { padding: 24px 40px; font-size: 24px; }
+}

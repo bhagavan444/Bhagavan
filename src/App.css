@@ -1,0 +1,10 @@
+/* ═══════════════════════════════════════════════════════════
+   APP SHELL — minimal, GPU-optimized
+   ═══════════════════════════════════════════════════════════ */
+
+#root {
+  width: 100%;
+  margin: 0 auto;
+  /* Removed max-width constraint — pages handle their own widths */
+  /* Removed text-align center — was breaking page layouts */
+}
