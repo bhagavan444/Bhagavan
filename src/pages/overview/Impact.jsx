@@ -36,13 +36,13 @@ const AnimatedNumber = ({ end, duration = 2, suffix = "" }) => {
 };
 
 export default function Impact() {
-  const metrics = [
-    { label: "Projects Built", value: 20, suffix: "+" },
-    { label: "Internships Completed", value: 1, suffix: "" },
-    { label: "Technologies Applied", value: 40, suffix: "+" },
-    { label: "AI Systems Developed", value: 5, suffix: "+" },
-    { label: "Deployments Shipped", value: 15, suffix: "+" }
-  ];
+ const metrics = [
+  { label: "Products Built", value: 10, suffix: "+" },
+  { label: "Industry Internships", value: 3, suffix: "" },
+  { label: "Technologies Applied", value: 15, suffix: "+" },
+  { label: "AI-Powered Systems", value: 5, suffix: "+" },
+  { label: "Projects Deployed", value: 10, suffix: "+" }
+];
 
   return (
     <div style={{ padding: '48px', height: '100%', background: '#000000', color: '#f5f5f7', display: 'flex', flexDirection: 'column' }}>

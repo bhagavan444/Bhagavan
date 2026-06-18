@@ -40,22 +40,24 @@ function Reveal({ children, className }) {
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 const HIGHLIGHTS = [
-  "4+ Internships",
-  "5+ AI Systems",
-  "Full Stack Engineering",
-  "Machine Learning",
-  "CareerOS",
-  "ResumeAI"
+"Artificial Intelligence",
+"Product Engineering",
+"Full-Stack Development",
+"Career Intelligence",
+"5+ AI Systems",
+"4+ Internships"
 ];
 
+
 const FOCUS = [
-  "Artificial Intelligence",
-  "Software Engineering",
-  "Backend Systems",
-  "Full Stack Development",
-  "Career Intelligence",
-  "Product Development"
+"Artificial Intelligence",
+"Product Development",
+"Software Engineering",
+"Intelligent Systems",
+"Career Intelligence",
+"Human-Centered Technology"
 ];
+
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 export default function Resume() {
@@ -73,21 +75,28 @@ export default function Resume() {
       ══════════════════════════════════════════════════════ */}
       <section className="res-hero" aria-label="Resume Hero">
         <m.h1 
-          className="res-hero-headline"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.1, ease: EASE }}
-        >
-          The Builder.
-        </m.h1>
-        <m.p 
-          className="res-hero-sub"
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.1, delay: 0.2, ease: EASE }}
-        >
-          Engineering intelligent systems through software, data, and continuous learning.
-        </m.p>
+       
+className="res-hero-headline"
+initial={{ opacity: 0, y: 40 }}
+animate={{ opacity: 1, y: 0 }}
+transition={{ duration: 1.1, ease: EASE }}
+
+>
+
+Building.
+</m.h1>
+
+<m.p
+className="res-hero-sub"
+initial={{ opacity: 0, y: 24 }}
+animate={{ opacity: 1, y: 0 }}
+transition={{ duration: 1.1, delay: 0.2, ease: EASE }}
+
+>
+
+Transforming ideas into intelligent products, meaningful experiences, and systems designed to create real-world impact.
+</m.p>
+
       </section>
 
       {/* ══════════════════════════════════════════════════════
@@ -186,12 +195,12 @@ export default function Resume() {
           </Reveal>
 
           <Reveal className="res-constrain--reading">
-            <m.p className="res-body" variants={fadeUp}>
-              A resume is not a list of experiences. It is evidence of learning, execution, and growth.
-            </m.p>
-            <m.p className="res-body" variants={fadeUp}>
-              Projects built. Problems solved. Systems engineered. Opportunities created.
-            </m.p>
+           <m.p className="res-body" variants={fadeUp}>
+Every project, internship, and challenge contributed to a deeper
+understanding of engineering, intelligence, and product development.
+Together, they tell the story of a builder committed to creating systems
+that solve real problems and create real impact.
+</m.p>
           </Reveal>
         </div>
       </section>

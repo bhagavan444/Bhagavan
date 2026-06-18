@@ -5,13 +5,24 @@ import { useNavigate } from 'react-router-dom';
 export default function InnovationPreview() {
   const navigate = useNavigate();
 
-  const items = [
-    { title: "Hackathons", desc: "Building competitive solutions under pressure." },
-    { title: "Workshops", desc: "Hands-on learning and skill acquisition." },
-    { title: "Experiments", desc: "Exploring the bleeding edge of AI." },
-    { title: "Technical Exploration", desc: "Constantly expanding the toolbelt." }
-  ];
-
+ const items = [
+  {
+    title: "Hackathons",
+    desc: "Turning ambitious ideas into real solutions through creativity, speed, and technical execution."
+  },
+  {
+    title: "Workshops",
+    desc: "Learning directly from industry practices and emerging technologies through immersive experiences."
+  },
+  {
+    title: "Exploration",
+    desc: "Investigating the future of artificial intelligence, intelligent systems, and digital innovation."
+  },
+  {
+    title: "Growth",
+    desc: "A commitment to continuous learning, experimentation, and expanding the boundaries of what is possible."
+  }
+];
   return (
     <div style={{ padding: '48px', height: '100%', background: '#fbfbfd', display: 'flex', flexDirection: 'column' }}>
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', justifyContent: 'center' }}>

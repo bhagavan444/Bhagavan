@@ -5,15 +5,14 @@ import { useNavigate } from 'react-router-dom';
 export default function EcosystemPreview() {
   const navigate = useNavigate();
 
-  const blocks = [
-    { name: "Frontend", color: "#0066cc" },
-    { name: "Backend", color: "#bf4800" },
-    { name: "AI Models", color: "#6b00b3" },
-    { name: "Data", color: "#008800" },
-    { name: "Cloud", color: "#000" },
-    { name: "Foundations", color: "#555" }
-  ];
-
+const blocks = [
+  { name: "Experience Design", color: "#0066cc" },
+  { name: "Platform Engineering", color: "#bf4800" },
+  { name: "AI Intelligence", color: "#6b00b3" },
+  { name: "Data Systems", color: "#008800" },
+  { name: "Cloud Architecture", color: "#000" },
+  { name: "Engineering Foundations", color: "#555" }
+];
   return (
     <div style={{ padding: '48px', height: '100%', background: '#000000', color: '#f5f5f7', textAlign: 'center', display: 'flex', flexDirection: 'column' }}>
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
@@ -26,13 +25,14 @@ export default function EcosystemPreview() {
           style={{ marginBottom: '40px' }}
         >
           <div style={{ fontSize: '0.8rem', fontWeight: 600, letterSpacing: '0.1em', color: '#a1a1a6', textTransform: 'uppercase', marginBottom: '8px' }}>
-            Ecosystem
+            Intelligence Ecosystem
           </div>
           <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 600, letterSpacing: '-0.03em', color: '#fff', marginBottom: '16px' }}>
-            The Technologies Behind The Work.
+           Built With Modern Engineering.
           </h2>
           <p style={{ fontSize: '1.2rem', color: '#a1a1a6' }}>
-            A massive ecosystem of frameworks, databases, and AI models precisely integrated into single, seamless architectures.
+           Modern frameworks, intelligent systems, and scalable infrastructure—unified to transform complex ideas into intuitive products.
+
           </p>
         </m.div>
 
@@ -60,7 +60,7 @@ export default function EcosystemPreview() {
           onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
           onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
         >
-          Explore Full Ecosystem
+          Discover The Ecosystem
         </m.button>
 
       </div>

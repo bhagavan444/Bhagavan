@@ -46,7 +46,7 @@ export default function Overview() {
           {/* Eyebrow */}
           <m.p className="phi-eyebrow" variants={fadeUp}>
             <span className="phi-eyebrow-dot" />
-            Full Stack AI Engineer &amp; Product Builder
+            • AI • SOFTWARE • HUMAN POTENTIAL
           </m.p>
 
           {/* Headline — the brand statement */}
@@ -56,13 +56,13 @@ export default function Overview() {
 
           {/* Body — one sentence, clear outcome */}
           <m.p className="phi-body" variants={fadeUp}>
-            I design and build AI-powered products, intelligent systems,
-            and scalable platforms that turn complex ideas into real-world impact.
+           I build intelligent products that combine artificial intelligence, software engineering, and thoughtful design to transform complexity into opportunity and ideas into impact.
+
           </m.p>
 
           {/* Signature — philosophical bridge */}
           <m.p className="phi-signature" variants={fadeUp}>
-            Building the next generation of opportunity through intelligent systems.
+           Engineering the future of opportunity through intelligence.
           </m.p>
 
           {/* Credibility metadata — Apple spec-row style */}
@@ -147,8 +147,8 @@ export default function Overview() {
             <m.p className="careeros-eyebrow" variants={fadeUp}>Flagship Product</m.p>
             <m.h2 className="careeros-headline" variants={fadeUp}>CareerOS.</m.h2>
             <m.p className="careeros-sub" variants={fadeUp}>
-              The first intelligence platform built to understand your career,
-              not just store your resume.
+              More than a resume platform. An intelligence system built to understand your potential.
+
             </m.p>
           </m.div>
 
@@ -161,12 +161,36 @@ export default function Overview() {
             variants={fadeUpStagger}
           >
             {[
-              { icon: "01", name: "Resume Intelligence", desc: "AI parses, scores, and rebuilds your resume against real job requirements." },
-              { icon: "02", name: "Career Intelligence", desc: "Maps your trajectory, identifies skill gaps, and projects your next move." },
-              { icon: "03", name: "GitHub Intelligence", desc: "Analyzes your commit history to surface technical strengths automatically." },
-              { icon: "04", name: "Recruiter Intelligence", desc: "Understands what hiring managers look for and helps you speak their language." },
-              { icon: "05", name: "Interview Intelligence", desc: "Personalized prep based on your target role, company, and skill profile." },
-              { icon: "06", name: "AI Assistant", desc: "A conversational layer that guides every decision across your career journey." },
+             {
+icon: "01",
+name: "Resume Intelligence",
+desc: "Understand the story behind your resume and unlock opportunities for improvement."
+},
+{
+icon: "02",
+name: "Career Intelligence",
+desc: "Turn career uncertainty into clear direction through data-driven insights."
+},
+{
+icon: "03",
+name: "GitHub Intelligence",
+desc: "Reveal the engineering signals hidden within your projects, code, and contributions."
+},
+{
+icon: "04",
+name: "Recruiter Intelligence",
+desc: "See your profile through the lens of modern hiring and talent evaluation."
+},
+{
+icon: "05",
+name: "Interview Intelligence",
+desc: "Build confidence with preparation tailored to your goals, skills, and aspirations."
+},
+{
+icon: "06",
+name: "AI Assistant",
+desc: "A unified intelligence layer connecting every step of your career journey."
+}
             ].map((feature) => (
               <m.div key={feature.icon} className="careeros-feature" variants={fadeUp}>
                 <span className="careeros-feature-num">{feature.icon}</span>
@@ -200,76 +224,198 @@ export default function Overview() {
             Capability Architecture.
           </m.h2>
           
-          <m.div className="capability-grid" initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUpStagger}>
-            {/* Core Languages */}
-            <m.div className="devicon-artifact" variants={fadeUp}><i className="devicon-python-plain"></i></m.div>
-            <m.div className="devicon-artifact" variants={fadeUp}><i className="devicon-javascript-plain"></i></m.div>
-            
-            {/* Full Stack Web */}
-            <m.div className="devicon-artifact" variants={fadeUp}><i className="devicon-react-original"></i></m.div>
-            <m.div className="devicon-artifact" variants={fadeUp}><i className="devicon-fastapi-plain"></i></m.div>
-            <m.div className="devicon-artifact" variants={fadeUp}><i className="devicon-flask-original"></i></m.div>
-            
-            {/* Database & Cloud */}
-            <m.div className="devicon-artifact" variants={fadeUp}><i className="devicon-postgresql-plain"></i></m.div>
-            <m.div className="devicon-artifact" variants={fadeUp}><i className="devicon-mongodb-plain"></i></m.div>
-            <m.div className="devicon-artifact" variants={fadeUp}><i className="devicon-amazonwebservices-plain-wordmark"></i></m.div>
-            
-            {/* AI / Machine Learning */}
-            <m.div className="devicon-artifact" variants={fadeUp}><i className="devicon-pytorch-original"></i></m.div>
-            <m.div className="devicon-artifact" variants={fadeUp}><i className="devicon-tensorflow-original"></i></m.div>
-            <m.div className="devicon-artifact" variants={fadeUp}><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg" alt="Scikit-learn" style={{ width: '1em', height: '1em' }} /></m.div>
-            <m.div className="devicon-artifact" variants={fadeUp}><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" alt="Pandas" style={{ width: '1em', height: '1em' }} /></m.div>
-          </m.div>
+          <m.div
+className="capability-grid"
+initial="hidden"
+whileInView="visible"
+viewport={{ once: true, margin: "-50px" }}
+variants={fadeUpStagger}
+
+>
+
+{/* Frontend */}
+<m.div className="devicon-artifact" variants={fadeUp}> <i className="devicon-react-original"></i>
+</m.div>
+
+<m.div className="devicon-artifact" variants={fadeUp}> <i className="devicon-vitejs-plain"></i>
+</m.div>
+
+{/* Backend */}
+<m.div className="devicon-artifact" variants={fadeUp}> <i className="devicon-python-plain"></i>
+</m.div>
+
+<m.div className="devicon-artifact" variants={fadeUp}> <i className="devicon-fastapi-plain"></i>
+</m.div>
+
+{/* AI */}
+<m.div className="devicon-artifact" variants={fadeUp}>
+<img
+src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg"
+alt="TensorFlow"
+style={{ width: '1em', height: '1em' }}
+/>
+</m.div>
+
+<m.div className="devicon-artifact" variants={fadeUp}>
+<img
+src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg"
+alt="Scikit-learn"
+style={{ width: '1em', height: '1em' }}
+/>
+</m.div>
+
+{/* Data */}
+<m.div className="devicon-artifact" variants={fadeUp}> <i className="devicon-mongodb-plain"></i>
+</m.div>
+
+<m.div className="devicon-artifact" variants={fadeUp}>
+<img
+src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg"
+alt="Pandas"
+style={{ width: '1em', height: '1em' }}
+/>
+</m.div>
+
+{/* Deployment */}
+<m.div className="devicon-artifact" variants={fadeUp}> <i className="devicon-vercel-original"></i>
+</m.div>
+
+<m.div className="devicon-artifact" variants={fadeUp}> <i className="devicon-docker-plain"></i>
+</m.div>
+
+{/* Development */}
+<m.div className="devicon-artifact" variants={fadeUp}> <i className="devicon-git-plain"></i>
+</m.div>
+
+<m.div className="devicon-artifact" variants={fadeUp}> <i className="devicon-github-original"></i>
+</m.div>
+</m.div>
         </div>
       </section>
 
       {/* =========================================
           NEW SECTION A: ALGORITHMIC DISCIPLINE
           ========================================= */}
-      <section className="apple-section split-screen-section">
-        <m.div className="split-typography" initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUpStagger}>
-          <m.h2 className="apple-headline-huge" variants={fadeUp}>
-            Algorithmic<br/>Discipline.
-          </m.h2>
-          <m.p className="apple-body-large" style={{ marginTop: '2vh' }} variants={fadeUp}>
-            181+ complex systemic issues deconstructed. Training the mind to build elegant logic under constraints.
-          </m.p>
-        </m.div>
-        <m.div className="split-artifact-container" initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp}>
-          <div className="hardware-frame">
-            <div className="hardware-screen">
-              <a href="https://leetcode.com/u/bhagavan444/" target="_blank" rel="noopener noreferrer" style={{ cursor: 'pointer', display: 'block' }}>
-                <img loading="lazy" src={leetcodeImg} alt="LeetCode Consistency" />
-              </a>
-            </div>
-          </div>
-        </m.div>
-      </section>
+     <section className="apple-section split-screen-section">
+  <m.div
+    className="split-typography"
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, margin: "-100px" }}
+    variants={fadeUpStagger}
+  >
+    <m.h2 className="apple-headline-huge" variants={fadeUp}>
+      Engineering<br />Thinking.
+    </m.h2>
+
+    <m.p
+      className="apple-body-large"
+      style={{ marginTop: "2vh" }}
+      variants={fadeUp}
+    >
+      181+ coding challenges solved. Building the problem-solving
+      foundation behind intelligent systems, scalable products,
+      and real-world software engineering.
+    </m.p>
+  </m.div>
+
+  <m.div
+    className="split-artifact-container"
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, margin: "-100px" }}
+    variants={fadeUp}
+  >
+    <div className="hardware-frame">
+      <div className="hardware-screen">
+        <a
+          href="https://leetcode.com/u/bhagavan444/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ cursor: "pointer", display: "block" }}
+        >
+          <img
+            loading="lazy"
+            src={leetcodeImg}
+            alt="LeetCode Problem Solving Journey"
+          />
+        </a>
+      </div>
+    </div>
+  </m.div>
+</section>
 
       {/* =========================================
           NEW SECTION B: OPEN SOURCE ECOSYSTEM
           ========================================= */}
-      <section className="apple-section" style={{ background: '#fbfbfd' }}>
-        <div className="apple-content-bounds">
-          <m.div style={{ textAlign: 'center' }} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUpStagger}>
-            <m.h2 className="apple-headline-huge" variants={fadeUp}>
-              Building In Public.
-            </m.h2>
-            <m.p className="apple-body-large" style={{ marginTop: '2vh', maxWidth: '800px', margin: '2vh auto 0' }} variants={fadeUp}>
-              The transparent evolution of a systems engineer. Open source contributions, public infrastructure, and continuous iteration.
-            </m.p>
-          </m.div>
-          
-          <m.div className="spatial-ui-grid" initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp}>
-            <div className="spatial-frame" style={{ position: 'relative', height: '100%' }}>
-              <a href="https://github.com/bhagavan444" target="_blank" rel="noopener noreferrer" style={{ cursor: 'pointer', display: 'block', height: '100%' }}>
-                <img loading="lazy" src={githubImg} alt="GitHub Ecosystem" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top left', display: 'block' }} />
-                <div style={{ position: 'absolute', bottom: '32px', left: '24px' }}>
-                  <button className="li-button" style={{ background: '#2da44e' }}>Follow</button>
-                </div>
-              </a>
-            </div>
+     <section className="apple-section" style={{ background: '#fbfbfd' }}>
+  <div className="apple-content-bounds">
+    <m.div
+      style={{ textAlign: 'center' }}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      variants={fadeUpStagger}
+    >
+      <m.h2 className="apple-headline-huge" variants={fadeUp}>
+        Engineering In<br />Public.
+      </m.h2>
+
+      <m.p
+        className="apple-body-large"
+        style={{
+          marginTop: '2vh',
+          maxWidth: '800px',
+          margin: '2vh auto 0'
+        }}
+        variants={fadeUp}
+      >
+        A living record of products, experiments, and intelligent systems.
+        Every repository represents a step toward building technology that
+        empowers growth, unlocks opportunity, and creates real-world impact.
+      </m.p>
+    </m.div>
+
+    <m.div
+      className="spatial-ui-grid"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      variants={fadeUp}
+    >
+      <div
+        className="spatial-frame"
+        style={{ position: 'relative', height: '100%' }}
+      >
+        <a
+          href="https://github.com/bhagavan444"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ cursor: 'pointer', display: 'block', height: '100%' }}
+        >
+          <img
+            loading="lazy"
+            src={githubImg}
+            alt="GitHub Engineering Journey"
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              objectPosition: 'top left',
+              display: 'block'
+            }}
+          />
+
+          <div style={{ position: 'absolute', bottom: '32px', left: '24px' }}>
+            <button
+              className="li-button"
+              style={{ background: '#2da44e' }}
+            >
+              Explore GitHub
+            </button>
+          </div>
+        </a>
+      </div>
             
             {/* High-Fidelity LinkedIn CSS Replica */}
             <div className="spatial-frame" style={{ background: 'transparent', boxShadow: 'none', border: 'none' }}>
@@ -299,29 +445,50 @@ export default function Overview() {
           NEW SECTION C: VERIFIED EXPERTISE
           ========================================= */}
       <section className="apple-section apple-section-dark">
-        <div className="apple-content-bounds">
-          <m.div style={{ textAlign: 'center' }} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUpStagger}>
-            <m.h2 className="apple-headline-huge" variants={fadeUp}>
-              Proof Of<br/>Commitment.
-            </m.h2>
-            <m.p className="apple-body-large" style={{ marginTop: '2vh' }} variants={fadeUp}>
-              Verified architectural expertise across Cloud, AI, and Infrastructure.
-            </m.p>
-          </m.div>
+  <div className="apple-content-bounds">
+    <m.div
+      style={{ textAlign: 'center' }}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      variants={fadeUpStagger}
+    >
+      <m.h2 className="apple-headline-huge" variants={fadeUp}>
+        Continuous<br />Learning.
+      </m.h2>
 
-          <m.div className="museum-constellation" initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUpStagger}>
-            <m.div className="museum-artifact" variants={fadeUp}>
-              <img loading="lazy" src={geminiStudentCert} alt="Gemini AI Certificate" />
-            </m.div>
-            <m.div className="museum-artifact" variants={fadeUp}>
-              <img loading="lazy" src={awsCloudCert} alt="AWS Cloud Certificate" />
-            </m.div>
-            <m.div className="museum-artifact" variants={fadeUp}>
-              <img loading="lazy" src={ibmAiCert} alt="IBM AI Certificate" />
-            </m.div>
-          </m.div>
-        </div>
-      </section>
+      <m.p
+        className="apple-body-large"
+        style={{ marginTop: '2vh' }}
+        variants={fadeUp}
+      >
+        Building expertise through industry certifications, hands-on learning,
+        and continuous exploration across artificial intelligence, cloud
+        computing, and modern software engineering.
+      </m.p>
+    </m.div>
+
+    <m.div
+      className="museum-constellation"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      variants={fadeUpStagger}
+    >
+      <m.div className="museum-artifact" variants={fadeUp}>
+        <img loading="lazy" src={geminiStudentCert} alt="Gemini AI Certificate" />
+      </m.div>
+
+      <m.div className="museum-artifact" variants={fadeUp}>
+        <img loading="lazy" src={awsCloudCert} alt="AWS Cloud Certificate" />
+      </m.div>
+
+      <m.div className="museum-artifact" variants={fadeUp}>
+        <img loading="lazy" src={ibmAiCert} alt="IBM AI Certificate" />
+      </m.div>
+    </m.div>
+  </div>
+</section>
 
       {/* =========================================
           SECTION 6: INTELLIGENCE ARCHITECTURE

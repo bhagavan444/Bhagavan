@@ -2,11 +2,26 @@ import React from 'react';
 import { m } from 'framer-motion';
 
 const capabilities = [
-  { name: "Software Engineering", desc: "Building scalable, robust architectures that power modern web and enterprise applications." },
-  { name: "Artificial Intelligence", desc: "Integrating advanced LLMs and multi-agent systems to solve complex cognitive tasks." },
-  { name: "Backend Architecture", desc: "Designing secure REST APIs, real-time SSE streaming, and microservices." },
-  { name: "Full Stack Development", desc: "Crafting seamless user experiences from dynamic React frontends to robust databases." },
-  { name: "Data Systems", desc: "Architecting efficient database schemas across MongoDB, MySQL, and vector stores." }
+  {
+    name: "Product Engineering",
+    desc: "Designing and building digital products that transform ideas into intuitive, real-world experiences."
+  },
+  {
+    name: "Artificial Intelligence",
+    desc: "Developing intelligent systems powered by machine learning and large language models to deliver meaningful insights."
+  },
+  {
+    name: "Full-Stack Development",
+    desc: "Creating seamless experiences across modern frontends, scalable backends, APIs, and databases."
+  },
+  {
+    name: "Career Intelligence",
+    desc: "Building platforms that analyze skills, experience, and potential to help people make better career decisions."
+  },
+  {
+    name: "Data & Analytics",
+    desc: "Transforming complex data into actionable intelligence through analysis, visualization, and predictive systems."
+  }
 ];
 
 export default function EngineeringCapabilities() {

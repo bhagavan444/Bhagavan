@@ -5,21 +5,22 @@ import resumeAIImg from '../../assets/resume.jpg';
 import leaveImg from '../../assets/leave.jpg';
 
 const products = [
-  {
-    title: "ResumeAI",
-    subtitle: "Next Generation Intelligence",
-    desc: "Transforming static documents into dynamic, semantically analyzed data profiles using advanced NLP algorithms.",
-    img: resumeAIImg,
-    theme: "light"
-  },
-  {
-    title: "Smart Leave",
-    subtitle: "Enterprise Automation",
-    desc: "Streamlining organizational workflows with predictive approval systems and seamless management interfaces.",
-    img: leaveImg,
-    theme: "light"
-  }
+{
+title: "ResumeAI",
+subtitle: "Reimagining Career Preparation",
+desc: "Designed to help individuals present their best work through intelligent resume creation, optimization, and career-focused insights.",
+img: resumeAIImg,
+theme: "light"
+},
+{
+title: "Smart Leave",
+subtitle: "Redefining Workflow Automation",
+desc: "Built to simplify employee leave management through intelligent workflows, seamless approvals, and modern enterprise experiences.",
+img: leaveImg,
+theme: "light"
+}
 ];
+
 
 export default function FeaturedProducts() {
   const navigate = useNavigate();

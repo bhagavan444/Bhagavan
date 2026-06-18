@@ -53,46 +53,61 @@ function Reveal({ children, className }) {
 const MINDSET_STEPS = ["Question.", "Experiment.", "Build.", "Learn.", "Repeat."];
 
 const LABS = [
-  { img: aimlWorkshopImg,     title: "Artificial Intelligence" },
-  { img: webWorkshopImg,      title: "Web Development" },
-  { img: mobileWorkshopImg,   title: "Mobile Development" },
-  { img: pythonWorkshopImg,   title: "Python Foundations" },
-  { img: powerWorkshopImg,    title: "Power Automate" }
+  {
+    img: aimlWorkshopImg,
+    title: "AI & Machine Learning"
+  },
+  {
+    img: webWorkshopImg,
+    title: "Modern Web Systems"
+  },
+  {
+    img: mobileWorkshopImg,
+    title: "Mobile Innovation"
+  },
+  {
+    img: pythonWorkshopImg,
+    title: "Software Foundations"
+  },
+  {
+    img: powerWorkshopImg,
+    title: "Workflow Automation"
+  }
 ];
 
 const FOUNDATION = [
-  "Python Programming",
-  "DSA",
-  "Coding Practice",
-  "Aptitude",
-  "Resume Engineering",
-  "Mock Interviews"
+  "Engineering Fundamentals",
+  "Problem Solving",
+  "Data Structures & Algorithms",
+  "Artificial Intelligence",
+  "Product Development",
+  "Career Growth"
 ];
 
 const EXPERIENCES = [
-  "Problem Solving",
-  "AI Engineering",
-  "Full Stack Development",
-  "System Design",
-  "Product Thinking",
-  "Continuous Learning"
+  "AI Systems",
+  "Product Engineering",
+  "Platform Development",
+  "Career Intelligence",
+  "System Thinking",
+  "Continuous Growth"
 ];
 
 const PRINCIPLES = [
-  "Technology should create opportunity.",
-  "Learning should never stop.",
-  "Curiosity should become action.",
-  "Ideas should become products.",
-  "Systems should solve meaningful problems."
+  "Technology should empower growth.",
+  "Intelligence should be accessible.",
+  "Complexity should feel simple.",
+  "Products should create impact.",
+  "Learning should never stop."
 ];
 
 const EXPLORATION = [
-  "Agentic AI",
-  "CareerOS Evolution",
-  "Recruiter Intelligence",
+  "Human Potential",
+  "Career Intelligence",
+  "AI Agents",
+  "Talent Intelligence",
   "Portfolio Intelligence",
-  "AI Career Copilot",
-  "Multi-Agent Systems"
+  "Future of Work"
 ];
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
@@ -114,7 +129,7 @@ export default function InnovationJourney() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, ease: EASE }}
         >
-          Innovation Begins With Curiosity.
+         Every Innovation Starts With A Question.
         </m.h1>
         <m.p 
           className="inn-hero-sub"
@@ -122,7 +137,7 @@ export default function InnovationJourney() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, delay: 0.2, ease: EASE }}
         >
-          Every meaningful product starts with a question worth exploring.
+         Every great product begins with a question that demands an answer.
         </m.p>
       </section>
 
@@ -134,7 +149,7 @@ export default function InnovationJourney() {
           <Reveal>
             <m.span className="inn-eyebrow" variants={fadeUp}>The Mindset</m.span>
             <m.h2 className="inn-section-headline" variants={fadeUp}>
-              Curiosity Creates Everything.
+              Everything Begins With Curiosity.
             </m.h2>
           </Reveal>
           
@@ -171,10 +186,10 @@ export default function InnovationJourney() {
           </m.div>
 
           <Reveal className="inn-constrain--reading">
-            <m.p className="inn-body" variants={fadeUp}>
-              A test of problem solving under constraints. It requires immediate decision making, rapid product development, and precise execution to build a functional architecture before time runs out.
-            </m.p>
-          </Reveal>
+  <m.p className="inn-body" variants={fadeUp}>
+    Innovation often happens under pressure. Limited time, limited resources, and complex problems create an environment where creativity, execution, and disciplined thinking must work together to turn ideas into reality.
+  </m.p>
+</Reveal>
         </div>
       </section>
 
@@ -186,7 +201,7 @@ export default function InnovationJourney() {
           <Reveal className="center-align">
             <m.span className="inn-eyebrow" variants={fadeUp}>Building In Public</m.span>
             <m.h2 className="inn-section-headline" variants={fadeUp}>
-              Ideas Become Better When Shared.
+              Great Ideas Grow When Shared.
             </m.h2>
           </Reveal>
 
@@ -220,7 +235,7 @@ export default function InnovationJourney() {
           <Reveal className="center-align">
             <m.span className="inn-eyebrow" variants={fadeUp}>Algorithmic Thinking</m.span>
             <m.h2 className="inn-section-headline" variants={fadeUp}>
-              Training The Mind.
+              The Discipline Of Thinking.
             </m.h2>
           </Reveal>
 
@@ -237,10 +252,10 @@ export default function InnovationJourney() {
           </m.div>
 
           <Reveal className="inn-constrain--reading">
-            <m.p className="inn-body" variants={fadeUp}>
-              Proof of deliberate practice. Training the mind in problem solving, rigorous reasoning, system decomposition, and analytical thinking.
-            </m.p>
-          </Reveal>
+  <m.p className="inn-body" variants={fadeUp}>
+    More than a measure of consistency, it is a practice in thinking. Every challenge strengthens problem-solving ability, sharpens analytical reasoning, and reinforces the discipline required to build intelligent systems and meaningful products.
+  </m.p>
+</Reveal>
         </div>
       </section>
 
@@ -252,7 +267,7 @@ export default function InnovationJourney() {
           <Reveal className="center-align">
             <m.span className="inn-eyebrow" variants={fadeUp}>Learning Labs</m.span>
             <m.h2 className="inn-section-headline" variants={fadeUp}>
-              Every Skill Started As An Experiment.
+              Every Innovation Starts With Learning.
             </m.h2>
           </Reveal>
 
@@ -277,7 +292,7 @@ export default function InnovationJourney() {
           <Reveal className="center-align">
             <m.span className="inn-eyebrow inn-eyebrow--dark" variants={fadeUp}>Professional Foundation</m.span>
             <m.h2 className="inn-section-headline inn-text-light" variants={fadeUp}>
-              Where Capability Became Confidence.
+             Where Learning Became Capability.
             </m.h2>
           </Reveal>
 
@@ -306,7 +321,7 @@ export default function InnovationJourney() {
         <div className="inn-constrain">
           <Reveal>
             <m.h2 className="inn-section-headline" variants={fadeUp}>
-              What These Experiences Built.
+             What Experience Made Possible.
             </m.h2>
           </Reveal>
           
@@ -328,7 +343,7 @@ export default function InnovationJourney() {
           <Reveal>
             <m.span className="inn-eyebrow inn-eyebrow--dark" variants={fadeUp}>Engineering Principles</m.span>
             <m.h2 className="inn-section-headline inn-text-light" variants={fadeUp}>
-              The Principles That Guide My Work.
+             Built On First Principles.
             </m.h2>
           </Reveal>
           

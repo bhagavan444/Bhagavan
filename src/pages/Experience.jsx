@@ -113,7 +113,8 @@ export default function Experience() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: EASE }}
         >
-          Experience Builds Judgment.
+         Experience Shapes Perspective.
+
         </m.h1>
         <m.p
           className="exp-hero-sub"
@@ -121,9 +122,8 @@ export default function Experience() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.18, ease: EASE }}
         >
-          Every internship, project, and engineering challenge contributed
-          to a deeper understanding of how intelligent systems are designed,
-          built, and deployed.
+         Every internship, project, and engineering challenge became an opportunity to learn how intelligent systems are designed, how products are built, and how technology creates meaningful impact in the real world.
+
         </m.p>
       </section>
 
@@ -142,87 +142,108 @@ export default function Experience() {
           >
             The First Real Problems.
           </m.h2>
-          <Reveal>
-            <m.p className="exp-body" variants={fadeUp}>
-              The real education didn't start with tutorials. It started with
-              code that wouldn't compile, servers that crashed at the wrong
-              moment, and datasets that refused to make sense. Moving beyond
-              guided exercises meant confronting the full complexity of systems
-              where nothing is pre-cleaned and nothing works the first time.
-            </m.p>
-            <m.p className="exp-body" variants={fadeUp}>
-              Every debugging session was a lesson in discipline. Every failed
-              deployment forced a deeper understanding of how software actually
-              operates under real conditions. Engineering judgment isn't taught
-              in a classroom — it is built through the slow accumulation of
-              solving problems that don't have a known answer.
-            </m.p>
-            <m.p className="exp-body" variants={fadeUp}>
-              What followed were four internships across machine learning,
-              software development, AI engineering, and enterprise automation.
-              Four different environments. Four different problem domains.
-              One consistent objective: learn by building something real.
-            </m.p>
-          </Reveal>
+          <section className="exp-intro" aria-labelledby="intro-headline">
+  <div className="exp-constrain exp-constrain--reading">
+    <m.h2
+      id="intro-headline"
+      className="exp-section-headline"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-80px" }}
+      variants={fadeUp}
+    >
+      Building Through Challenges.
+    </m.h2>
+
+<Reveal>
+  <m.p className="exp-body" variants={fadeUp}>
+    The journey began with real problems. Systems that failed unexpectedly,
+    integrations that refused to cooperate, and ideas that proved far more
+    difficult to build than they appeared on paper. Every challenge exposed
+    a new layer of complexity and revealed how modern software truly works.
+  </m.p>
+
+  <m.p className="exp-body" variants={fadeUp}>
+    Through debugging, iteration, and continuous experimentation came a
+    deeper understanding of engineering. Not just how to write code, but
+    how to design reliable systems, solve ambiguous problems, and transform
+    complexity into clarity.
+  </m.p>
+
+  <m.p className="exp-body" variants={fadeUp}>
+    That foundation was strengthened through internships in software
+    development, artificial intelligence, machine learning, and enterprise
+    technology. Different environments. Different challenges. One shared
+    objective: build meaningful solutions and learn through execution.
+  </m.p>
+</Reveal>
+
+  </div>
+</section>
+
         </div>
       </section>
 
       {/* ══════════════════════════════════════════════════════
           SECTION 3 — BLACKBUCKS
       ══════════════════════════════════════════════════════ */}
-      <Chapter
-        eyebrow="Machine Learning Internship"
-        headline="Understanding Data."
-        company="Blackbucks"
-        role="Machine Learning"
-        duration="2023"
-        editorial="At Blackbucks, the work was not about algorithms. It was about what exists beneath them. Raw datasets are noise until they are preprocessed, structured, and interrogated with precision. Learning to engineer features, evaluate model performance, and interpret results revealed that machine learning is fundamentally an information design discipline — a process of turning ambiguity into signal. That insight, more than any model, became the foundation of everything that followed."
-        cert={blackbucksCert}
-        certAlt="Blackbucks Machine Learning Internship Certificate"
-      />
+     <Chapter
+eyebrow="Machine Learning Internship"
+headline="Learning From Data."
+company="Blackbucks"
+role="Machine Learning Intern"
+duration="2023"
+editorial="At Blackbucks, the focus extended beyond building models. The real challenge was understanding data itself—how information is collected, prepared, analyzed, and transformed into meaningful insights. Working with machine learning workflows revealed that successful AI systems depend not only on algorithms, but on the quality of the data, the rigor of the process, and the ability to extract signal from complexity. This experience established the analytical foundation that would later influence every intelligent system and product built thereafter."
+cert={blackbucksCert}
+certAlt="Blackbucks Machine Learning Internship Certificate"
+/>
+
 
       {/* ══════════════════════════════════════════════════════
           SECTION 4 — STUDYOWL
       ══════════════════════════════════════════════════════ */}
       <Chapter
-        eyebrow="Software Development Internship"
-        headline="Building Software."
-        company="StudyOwl"
-        role="Software Development"
-        duration="2024"
-        editorial="Models mean nothing if users cannot interact with them. StudyOwl was the transition from scripts to scalable infrastructure. Designing REST APIs, integrating MongoDB, implementing authentication systems, and connecting front-end interfaces to back-end logic transformed isolated technical knowledge into the ability to build something a real person can use. That shift — from writing code to building a product — is irreversible. Once you've seen the difference, you can't unsee it."
-        cert={studyOwlCert}
-        certAlt="StudyOwl Software Development Internship Certificate"
-      />
+eyebrow="Software Development Internship"
+headline="Building Products."
+company="StudyOwl"
+role="Software Development Intern"
+duration="2024"
+editorial="At StudyOwl, software engineering became more than writing code. The experience introduced the full lifecycle of building digital products—from designing application logic and integrating databases to creating seamless interactions between users and systems. Working across both frontend and backend technologies revealed how architecture, usability, and reliability must work together to create meaningful experiences. It was the moment technical knowledge evolved into product thinking, shaping the approach behind every platform built since."
+cert={studyOwlCert}
+certAlt="StudyOwl Software Development Internship Certificate"
+/>
+
 
       {/* ══════════════════════════════════════════════════════
           SECTION 5 — SMARTBRIDGE
       ══════════════════════════════════════════════════════ */}
       <Chapter
-        eyebrow="Software Engineering Internship"
-        headline="Making Intelligence Useful."
-        company="SmartBridge"
-        role="Software Engineering"
-        duration="2024"
-        editorial="The gap between a working model and a deployed application is enormous. SmartBridge demanded that AI stop being an experiment and start being a product. Flask applications, automation workflows, and AI-integrated tools required thinking not just about what a system does, but about how it fits into the hands of someone who needs it. That is when software engineering became solution design — and when technical depth started to converge with product thinking."
-        cert={smartBridgeCert}
-        certAlt="SmartBridge Software Engineering Internship Certificate"
-      />
+eyebrow="Software Engineering Internship"
+headline="Applying Intelligence."
+company="SmartBridge"
+role="Software Engineering Intern"
+duration="2024"
+editorial="At SmartBridge, the focus shifted from building systems to creating solutions. Working with artificial intelligence, automation workflows, and software applications revealed that technology creates value only when it solves real problems for real people. The experience combined engineering, AI, and product thinking—demonstrating how intelligent systems can be integrated into practical workflows that improve efficiency, decision-making, and user experience. It was here that the connection between intelligence and impact became clear."
+cert={smartBridgeCert}
+certAlt="SmartBridge Software Engineering Internship Certificate"
+/>
+
 
       {/* ══════════════════════════════════════════════════════
           SECTION 6 — HELSON (dark environment)
       ══════════════════════════════════════════════════════ */}
       <Chapter
-        dark
-        eyebrow="Enterprise Automation"
-        headline="Designing Systems That Scale."
-        company="Helson"
-        role="Enterprise Automation"
-        duration="2024"
-        editorial="Helson was where code stopped executing commands and started making decisions. Building automation architectures for enterprise workflows — decision systems, process pipelines, operational efficiency tools — meant writing software that had to operate reliably without a human in the loop. At that scale, every design choice has operational consequences. Architecture matters. Failure modes matter. The difference between a script and a system becomes immediately apparent when something breaks at 3 AM and there is no one to ask."
-        cert={helsonCert}
-        certAlt="Helson Enterprise Automation Internship Certificate"
-      />
+dark
+eyebrow="Enterprise Automation"
+headline="Designing Intelligent Workflows."
+company="Helson"
+role="Enterprise Automation Intern"
+duration="2024"
+editorial="At Helson, the focus shifted toward process automation and operational efficiency. Working with enterprise workflows revealed how technology can eliminate repetitive tasks, streamline decision-making, and improve the way organizations operate at scale. The experience emphasized system thinking—understanding how individual processes connect, how information flows across an organization, and how automation can transform complexity into reliability. It reinforced the idea that great systems are not defined by the technology behind them, but by the outcomes they create."
+cert={helsonCert}
+certAlt="Helson Enterprise Automation Internship Certificate"
+/>
+
 
       {/* ══════════════════════════════════════════════════════
           SECTION 7 — CAPABILITIES
@@ -237,23 +258,23 @@ export default function Experience() {
             viewport={{ once: true, margin: "-80px" }}
             variants={fadeUp}
           >
-            Capabilities Built Through Execution.
+           Expertise Earned Through Building.
           </m.h2>
           <Reveal className="exp-cap-list">
-            {[
-              "AI Engineering",
-              "Full Stack Engineering",
-              "Backend Systems",
-              "Machine Learning",
-              "System Design",
-              "Product Thinking",
-              "Problem Solving",
-            ].map((cap) => (
-              <m.p key={cap} className="exp-cap-item" variants={fadeUp}>
-                {cap}
-              </m.p>
-            ))}
-          </Reveal>
+  {[
+    "AI Systems",
+    "Product Engineering",
+    "Platform Development",
+    "Career Intelligence",
+    "Data Intelligence",
+    "System Architecture",
+    "Human-Centered Design",
+  ].map((cap) => (
+    <m.p key={cap} className="exp-cap-item" variants={fadeUp}>
+      {cap}
+    </m.p>
+  ))}
+</Reveal>
         </div>
       </section>
 

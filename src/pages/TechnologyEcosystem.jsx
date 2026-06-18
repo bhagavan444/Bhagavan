@@ -30,121 +30,124 @@ const CAPABILITY_MARKS = {
 // not a list of features. The text explains WHY these technologies matter.
 const SKILL_GROUPS = [
   {
-    title: 'Programming Languages',
-    editorial:
-      'Every system begins with a language. Python for intelligence and data science. Java for enterprise-grade architecture. JavaScript and TypeScript for full-stack development. SQL as the universal language of structured data.',
-    items: [
-      { name: 'Python',     icon: getSimpleIcon('python') },
-      { name: 'Java',       icon: getSimpleIcon('openjdk') },
-      { name: 'JavaScript', icon: getSimpleIcon('javascript') },
-      { name: 'TypeScript', icon: getSimpleIcon('typescript') },
-      { name: 'SQL',        icon: getSimpleIcon('postgresql') },
-    ],
-  },
+title: 'Programming Languages',
+editorial:
+'The building blocks of modern software. These technologies make it possible to create intelligent systems, engineer scalable platforms, process data, and deliver digital experiences that solve real-world problems.',
+items: [
+{ name: 'Python',     icon: getSimpleIcon('python') },
+{ name: 'Java',       icon: getSimpleIcon('openjdk') },
+{ name: 'JavaScript', icon: getSimpleIcon('javascript') },
+{ name: 'TypeScript', icon: getSimpleIcon('typescript') },
+{ name: 'SQL',        icon: getSimpleIcon('postgresql') },
+],
+},
+ {
+title: 'Frontend Engineering',
+editorial:
+'Where technology becomes experience. Modern frontend engineering combines performance, accessibility, and thoughtful design to create interfaces that feel intuitive, responsive, and effortless to use.',
+items: [
+{ name: 'React',        icon: getSimpleIcon('react') },
+{ name: 'Next.js',      icon: getSimpleIcon('nextdotjs') },
+{ name: 'HTML5',        icon: getSimpleIcon('html5') },
+{ name: 'CSS3',         icon: getSimpleIcon('css3') },
+{ name: 'Tailwind CSS', icon: getSimpleIcon('tailwindcss') },
+],
+}
+,
   {
-    title: 'Frontend Engineering',
-    editorial:
-      'The surface where engineering meets human experience. Building interfaces that are fast by default, adaptive to context, and precise enough to feel effortless to the people using them.',
-    items: [
-      { name: 'React',        icon: getSimpleIcon('react') },
-      { name: 'Next.js',      icon: getSimpleIcon('nextdotjs') },
-      { name: 'HTML5',        icon: getSimpleIcon('html5') },
-      { name: 'CSS3',         icon: getSimpleIcon('css3') },
-      { name: 'Tailwind CSS', icon: getSimpleIcon('tailwindcss') },
-    ],
-  },
+title: 'Backend Engineering',
+editorial:
+'Invisible to the user, essential to the experience. Backend systems provide the intelligence, reliability, and scalability required to transform ideas into products that work seamlessly at every interaction.',
+items: [
+{ name: 'Node.js',    icon: getSimpleIcon('nodedotjs') },
+{ name: 'Express.js', icon: getSimpleIcon('express') },
+{ name: 'Flask',      icon: getSimpleIcon('flask') },
+{ name: 'FastAPI',    icon: getSimpleIcon('fastapi') },
+{ name: 'REST APIs',  icon: null },
+],
+}
+,
   {
-    title: 'Backend Engineering',
-    editorial:
-      'The infrastructure layer that makes everything else possible. Secure by design, reliable under load, and architected to scale from prototype to production without compromise.',
-    items: [
-      { name: 'Node.js',    icon: getSimpleIcon('nodedotjs') },
-      { name: 'Express.js', icon: getSimpleIcon('express') },
-      { name: 'Flask',      icon: getSimpleIcon('flask') },
-      { name: 'FastAPI',    icon: getSimpleIcon('fastapi') },
-      { name: 'REST APIs',  icon: null },
-    ],
-  },
+title: 'Artificial Intelligence & Machine Learning',
+editorial:
+'Intelligence is most powerful when it creates clarity. These technologies enable the development of systems that analyze information, uncover insights, and transform complex data into meaningful action.',
+items: [
+{ name: 'NumPy',        icon: getSimpleIcon('numpy') },
+{ name: 'Pandas',       icon: getSimpleIcon('pandas') },
+{ name: 'Scikit-learn', icon: getSimpleIcon('scikitlearn') },
+{ name: 'PyTorch',      icon: getSimpleIcon('pytorch') },
+{ name: 'LangChain',    icon: getSimpleIcon('langchain') },
+{ name: 'RAG Systems',  icon: null },
+{ name: 'XGBoost',      icon: null },
+{ name: 'LightGBM',     icon: null },
+],
+}
+,{
+title: 'LLM & AI Systems',
+editorial:
+'A new generation of intelligence. By combining large language models, retrieval systems, and AI orchestration frameworks, these technologies make it possible to build experiences that understand context, assist decision-making, and transform information into actionable insight.',
+items: [
+{ name: 'LangGraph',        icon: null },
+{ name: 'LlamaIndex',       icon: getSimpleIcon('llamaindex') },
+{ name: 'OpenAI API',       icon: getSimpleIcon('openai') },
+{ name: 'Gemini API',       icon: getSimpleIcon('googlegemini') },
+{ name: 'Anthropic API',    icon: getSimpleIcon('anthropic') },
+{ name: 'Vector Databases', icon: null },
+],
+}
+,
   {
-    title: 'Artificial Intelligence & Machine Learning',
-    editorial:
-      'The discipline of building systems that learn. From classical gradient boosting to large-scale neural architectures, applied to real engineering problems that require measurable, production-grade results.',
-    items: [
-      { name: 'NumPy',        icon: getSimpleIcon('numpy') },
-      { name: 'Pandas',       icon: getSimpleIcon('pandas') },
-      { name: 'Scikit-learn', icon: getSimpleIcon('scikitlearn') },
-      { name: 'PyTorch',      icon: getSimpleIcon('pytorch') },
-      { name: 'LangChain',    icon: getSimpleIcon('langchain') },
-      { name: 'RAG Systems',  icon: null },
-      { name: 'XGBoost',      icon: null },
-      { name: 'LightGBM',     icon: null },
-    ],
-  },
+title: 'Databases & Data Infrastructure',
+editorial:
+'Every intelligent product begins with data. From traditional databases to modern vector search systems, these technologies provide the foundation for storing knowledge, uncovering insights, and powering experiences that scale with confidence.',
+items: [
+{ name: 'MongoDB',    icon: getSimpleIcon('mongodb') },
+{ name: 'PostgreSQL', icon: getSimpleIcon('postgresql') },
+{ name: 'MySQL',      icon: getSimpleIcon('mysql') },
+{ name: 'Redis',      icon: getSimpleIcon('redis') },
+],
+}
+,
   {
-    title: 'LLM & AI Systems',
-    editorial:
-      'Modern intelligence engineering. Orchestrating large language models, retrieval pipelines, and agent frameworks into production-grade applications that reason, retrieve, and respond with contextual accuracy.',
-    items: [
-      { name: 'LangGraph',        icon: null },
-      { name: 'LlamaIndex',       icon: getSimpleIcon('llamaindex') },
-      { name: 'OpenAI API',       icon: getSimpleIcon('openai') },
-      { name: 'Gemini API',       icon: getSimpleIcon('googlegemini') },
-      { name: 'Anthropic API',    icon: getSimpleIcon('anthropic') },
-      { name: 'Vector Databases', icon: null },
-    ],
-  },
+title: 'Cloud & DevOps',
+editorial:
+'Great products must be reliable, maintainable, and ready to grow. These technologies support deployment, automation, collaboration, and cloud infrastructure—helping transform ideas into products that can evolve with confidence.',
+items: [
+{ name: 'Docker',         icon: getSimpleIcon('docker') },
+{ name: 'AWS',            icon: getSimpleIcon('amazonaws') },
+{ name: 'Git',            icon: getSimpleIcon('git') },
+{ name: 'GitHub',         icon: getSimpleIcon('github') },
+{ name: 'GitHub Actions', icon: getSimpleIcon('githubactions') },
+{ name: 'Vercel',         icon: getSimpleIcon('vercel') },
+{ name: 'Render',         icon: getSimpleIcon('render') },
+],
+}
+,
   {
-    title: 'Databases & Data Infrastructure',
-    editorial:
-      'Every application is built on data. Relational, document, key-value, and vector — the right storage layer for every access pattern, query requirement, and scale demand.',
-    items: [
-      { name: 'MongoDB',    icon: getSimpleIcon('mongodb') },
-      { name: 'PostgreSQL', icon: getSimpleIcon('postgresql') },
-      { name: 'MySQL',      icon: getSimpleIcon('mysql') },
-      { name: 'Redis',      icon: getSimpleIcon('redis') },
-      { name: 'Pinecone',   icon: getSimpleIcon('pinecone') },
-      { name: 'Qdrant',     icon: getSimpleIcon('qdrant') },
-    ],
-  },
+title: 'Java Ecosystem',
+editorial:
+'Built on principles of reliability and scalability, the Java ecosystem offers a deeper understanding of modern backend engineering. From application architecture to security and data management, it provides the foundation for building systems designed to grow and endure.',
+items: [
+{ name: 'Java',            icon: getSimpleIcon('openjdk') },
+{ name: 'Spring Boot',     icon: getSimpleIcon('springboot') },
+
+],
+}
+,
   {
-    title: 'Cloud & DevOps',
-    editorial:
-      'Engineering doesn\'t end at code. Containerized deployments, automated CI/CD pipelines, and cloud infrastructure designed to keep production systems running reliably at any scale.',
-    items: [
-      { name: 'Docker',         icon: getSimpleIcon('docker') },
-      { name: 'AWS',            icon: getSimpleIcon('amazonaws') },
-      { name: 'Git',            icon: getSimpleIcon('git') },
-      { name: 'GitHub',         icon: getSimpleIcon('github') },
-      { name: 'GitHub Actions', icon: getSimpleIcon('githubactions') },
-      { name: 'Vercel',         icon: getSimpleIcon('vercel') },
-      { name: 'Render',         icon: getSimpleIcon('render') },
-    ],
-  },
-  {
-    title: 'Java Ecosystem',
-    editorial:
-      'Enterprise-grade backend architecture at scale. Spring\'s comprehensive framework enables secure, data-driven, production-ready services — built for teams, built to last.',
-    items: [
-      { name: 'Java',            icon: getSimpleIcon('openjdk') },
-      { name: 'Spring Boot',     icon: getSimpleIcon('springboot') },
-      { name: 'Spring Security', icon: getSimpleIcon('springsecurity') },
-      { name: 'Spring Data JPA', icon: null },
-    ],
-  },
-  {
-    title: 'Engineering Foundations',
-    editorial:
-      'The concepts that outlast every technology cycle. Understanding these deeply is what separates engineers who build lasting systems from those who simply consume frameworks.',
-    items: [
-      { name: 'Data Structures & Algorithms', icon: null },
-      { name: 'Object-Oriented Programming',  icon: null },
-      { name: 'DBMS',                         icon: null },
-      { name: 'Operating Systems',            icon: null },
-      { name: 'Computer Networks',            icon: null },
-      { name: 'System Design',                icon: null },
-      { name: 'SDLC',                         icon: null },
-    ],
-  },
+title: 'Engineering Foundations',
+editorial:
+'Every great system is built on timeless principles. These fundamentals shape the way problems are approached, architectures are designed, and products are engineered—providing the foundation behind every intelligent application and platform.',
+items: [
+{ name: 'Data Structures & Algorithms', icon: null },
+{ name: 'Object-Oriented Programming',  icon: null },
+{ name: 'DBMS',                         icon: null },
+{ name: 'Operating Systems',            icon: null },
+{ name: 'Computer Networks',            icon: null },
+{ name: 'System Design',                icon: null },
+{ name: 'SDLC',                         icon: null },
+],
+},
 ];
 
 // ─── Motion Variants ──────────────────────────────────────────────────────────
@@ -290,8 +293,7 @@ export default function TechnologyEcosystem() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.22, ease: APPLE_EASE }}
         >
-          Years of engineering distilled into systems, products,
-          intelligence, and infrastructure.
+        Every skill, system, and capability was developed through continuous learning, experimentation, and real-world execution. Progress came not from theory alone, but from building, testing, failing, improving, and building again.
         </m.p>
       </section>
 
@@ -310,14 +312,13 @@ export default function TechnologyEcosystem() {
         variants={sectionStagger}
       >
         <m.h2 className="eco-closing-headline" variants={fadeUp}>
-          The Tools Evolve.
+          Technology Changes
         </m.h2>
         <m.h3 className="eco-closing-subheadline" variants={fadeUp}>
           The Fundamentals Remain.
         </m.h3>
         <m.p className="eco-closing-text" variants={fadeUp}>
-          Technology changes. Principles endure. The ability to solve problems,
-          design systems, and create meaningful products remains timeless.
+          Technologies change. Great engineering principles do not. The pursuit of solving problems, designing systems, and creating meaningful products remains constant.
         </m.p>
       </m.section>
 

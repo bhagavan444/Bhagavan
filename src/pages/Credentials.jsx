@@ -101,30 +101,39 @@ export default function Credentials() {
           SECTION 1 — HERO
       ══════════════════════════════════════════════════════ */}
       <section className="cred-hero" aria-label="Credentials Hero">
-        <m.h1 
-          className="cred-hero-headline"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.1, ease: EASE }}
-        >
-          Mastery.
-        </m.h1>
-        <m.h1 
-          className="cred-hero-headline cred-text-muted"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.1, delay: 0.05, ease: EASE }}
-        >
-          Built Continuously.
-        </m.h1>
-        <m.p 
-          className="cred-hero-sub"
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.1, delay: 0.2, ease: EASE }}
-        >
-          Every certification represents a skill acquired, a capability developed, and a step toward building intelligent systems.
-        </m.p>
+       <m.h1
+className="cred-hero-headline"
+initial={{ opacity: 0, y: 40 }}
+animate={{ opacity: 1, y: 0 }}
+transition={{ duration: 1.1, ease: EASE }}
+
+>
+
+Knowledge.
+</m.h1>
+
+<m.h1
+className="cred-hero-headline cred-text-muted"
+initial={{ opacity: 0, y: 40 }}
+animate={{ opacity: 1, y: 0 }}
+transition={{ duration: 1.1, delay: 0.05, ease: EASE }}
+
+>
+
+Applied.
+</m.h1>
+
+<m.p
+className="cred-hero-sub"
+initial={{ opacity: 0, y: 24 }}
+animate={{ opacity: 1, y: 0 }}
+transition={{ duration: 1.1, delay: 0.2, ease: EASE }}
+
+>
+
+A collection of certifications, learning experiences, and technical exploration that continue to shape the way products are designed, built, and improved.
+</m.p>
+
       </section>
 
       {/* ══════════════════════════════════════════════════════
@@ -152,7 +161,8 @@ export default function Credentials() {
           <div className="cred-foundation-grid">
             <Reveal className="cred-foundation-text">
               <m.p className="cred-body" variants={fadeUp}>
-                The Special Training Program conducted by Ramachandra College of Engineering marked a pivotal step in transforming academic knowledge into professional readiness. It established the foundation for solving real-world engineering challenges.
+                The Special Training Program at Ramachandra College of Engineering served as a bridge between learning and application. It transformed foundational concepts into practical capabilities, developing the problem-solving mindset, technical discipline, and engineering fundamentals that continue to shape every product and system built today.
+
               </m.p>
             </Reveal>
 
@@ -179,7 +189,7 @@ export default function Credentials() {
               Artificial Intelligence & Data Science.
             </m.h2>
             <m.p className="cred-body cred-body--center" variants={fadeUp}>
-              The academic bedrock. A comprehensive engineering foundation focusing on artificial intelligence architectures, data structures, and advanced machine learning algorithms at Ramachandra College of Engineering.
+              The foundation of an engineering journey focused on intelligence, systems, and problem solving. Built through the study of artificial intelligence, data science, software engineering, and computational thinking—forming the knowledge base behind every intelligent product and platform developed since.
             </m.p>
           </Reveal>
         </div>
@@ -191,10 +201,11 @@ export default function Credentials() {
       <section className="cred-ai">
         <div className="cred-constrain">
           <Reveal className="center-align">
-            <m.h2 className="cred-section-headline" variants={fadeUp}>Learning Intelligence.</m.h2>
+            <m.h2 className="cred-section-headline" variants={fadeUp}>Where Intelligence Was First Explored..</m.h2>
             <m.p className="cred-body cred-body--center" variants={fadeUp}>
-              Understanding generative models, prompt engineering, and the architecture behind modern AI systems through deep-dives into Google and IBM's ecosystems.
-            </m.p>
+A deeper exploration into the technologies powering modern intelligence. From generative AI and machine learning to prompt engineering and large language models, these experiences expanded an understanding of how intelligent systems are designed, trained, and applied in the real world.
+</m.p>
+
           </Reveal>
 
           <Reveal className="cred-cert-gallery">
@@ -220,10 +231,11 @@ export default function Credentials() {
       <section className="cred-cloud cred-alt">
         <div className="cred-constrain">
           <Reveal className="center-align">
-            <m.h2 className="cred-section-headline" variants={fadeUp}>Building At Scale.</m.h2>
+            <m.h2 className="cred-section-headline" variants={fadeUp}>Built To Scale.</m.h2>
             <m.p className="cred-body cred-body--center" variants={fadeUp}>
-              Intelligence must be deployed to be useful. Mastering cloud architectures and MLOps ensures that models transcend local environments and scale globally.
-            </m.p>
+Building intelligent systems is only part of the journey. Understanding cloud infrastructure, deployment, and scalability reveals how technology evolves from an idea into a reliable product capable of delivering value at scale.
+</m.p>
+
           </Reveal>
 
           <Reveal className="cred-cert-gallery">
@@ -248,8 +260,9 @@ export default function Credentials() {
           <Reveal className="center-align">
             <m.h2 className="cred-section-headline" variants={fadeUp}>Engineering Foundations.</m.h2>
             <m.p className="cred-body cred-body--center" variants={fadeUp}>
-              The grammar of building. Fluency in Python, Java, JavaScript, and backend frameworks allows ideas to be translated into robust, secure ecosystems.
-            </m.p>
+Every product begins with fundamentals. Through programming, software engineering, and problem solving, the ability to transform ideas into reliable systems was developed—creating the foundation behind every intelligent product and platform built today.
+</m.p>
+
           </Reveal>
 
           <Reveal className="cred-cert-gallery">
@@ -276,7 +289,7 @@ export default function Credentials() {
         <div className="cred-constrain">
           <Reveal>
             <m.h2 className="cred-section-headline" variants={fadeUp}>
-              What These Experiences Created.
+             What Experience Made Possible.
             </m.h2>
           </Reveal>
           
@@ -297,7 +310,7 @@ export default function Credentials() {
         <div className="cred-constrain">
           <Reveal className="center-align">
             <m.h2 className="cred-section-headline" variants={fadeUp}>
-              Years Of Continuous Learning.
+              Learning Never Stops.
             </m.h2>
           </Reveal>
 
@@ -378,16 +391,40 @@ export default function Credentials() {
       <section className="cred-beyond">
         <div className="cred-constrain center-align">
           <Reveal>
-            <m.h2 className="cred-section-headline" variants={fadeUp}>
-              Credentials Are Only The Beginning.
-            </m.h2>
-            <m.p className="cred-body cred-body--center" variants={fadeUp} style={{ marginTop: '32px' }}>
-              Learning matters. Building matters more. Impact matters most.
-            </m.p>
-            <m.p className="cred-body cred-body--center" variants={fadeUp}>
-              These credentials were not acquired to decorate a portfolio; they were acquired to build robust, scalable, intelligent systems that solve real problems.
-            </m.p>
-          </Reveal>
+  <m.h2 className="cred-section-headline" variants={fadeUp}>
+    Learning Never Stops.
+  </m.h2>
+
+<m.p
+className="cred-body cred-body--center"
+variants={fadeUp}
+style={{ marginTop: '32px' }}
+
+>
+
+
+Knowledge creates capability. Execution creates impact.
+
+
+</m.p>
+
+<m.p
+className="cred-body cred-body--center"
+variants={fadeUp}
+
+>
+
+
+Every certification, workshop, internship, and project contributed to a
+
+
+deeper understanding of technology, intelligence, and engineering. The
+goal was never to collect credentials, but to build the knowledge required
+to create products that solve meaningful problems and unlock human
+potential.
+
+</m.p> </Reveal>
+
         </div>
       </section>
 
@@ -397,12 +434,16 @@ export default function Credentials() {
       <section className="cred-closing cred-dark" aria-label="Closing statement">
         <div className="cred-constrain center-align">
           <Reveal>
-            <m.h2 className="cred-closing-headline" variants={fadeUp}>
-              Always Learning.
-            </m.h2>
-            <m.p className="cred-closing-sub" variants={fadeUp}>
-              The most valuable credential is the ability to continuously learn, adapt, and build.
-            </m.p>
+           
+           <Reveal>
+  <m.h2 className="cred-closing-headline" variants={fadeUp}>
+    Always Learning.
+  </m.h2>
+
+<m.p className="cred-closing-sub" variants={fadeUp}>
+Every achievement is a milestone, not a destination. Growth continues through curiosity, exploration, and the pursuit of building better products.
+</m.p> </Reveal>
+
           </Reveal>
         </div>
       </section>

@@ -8,31 +8,36 @@ import { m, AnimatePresence } from "framer-motion";
 // ─────────────────────────────────────────────
 
 const PRIMARY_NAV = [
-  { label: "Overview",  path: "/overview" },
-  { label: "Products",  path: "/work" },
-  { label: "Journey",   path: "/experience" },
+  { label: "Overview", path: "/overview" },
+
+  { label: "Products", path: "/work" },
+
+  { label: "Journey", path: "/experience" },
+
   {
-    label: "Intelligence",
+    label: "Capabilities",
     dropdown: [
-      { label: "Innovation",           sub: "Research & Engineering",    path: "/innovation" },
-      { label: "Credentials",          sub: "Verified Expertise",        path: "/credentials" },
-      { label: "Technology Ecosystem", sub: "Stack & Architecture",       path: "/ecosystem" },
+      { label: "Innovation", sub: "Research & Exploration", path: "/innovation" },
+      { label: "Credentials", sub: "Learning & Certifications", path: "/credentials" },
+      { label: "Technology", sub: "Tools & Ecosystem", path: "/ecosystem" },
     ],
   },
-  { label: "Vision",   path: "/vision" },
-  { label: "Connect",  path: "/connect" },
+
+  { label: "Vision", path: "/vision" },
+
+  { label: "Connect", path: "/connect" },
 ];
 
 const MOBILE_NAV = [
-  { label: "Overview",              path: "/overview" },
-  { label: "Products",              path: "/work" },
-  { label: "Journey",               path: "/experience" },
-  { label: "Vision",                path: "/vision" },
-  { label: "Connect",               path: "/connect" },
-  { label: "Innovation",            path: "/innovation" },
-  { label: "Credentials",           path: "/credentials" },
-  { label: "Technology Ecosystem",  path: "/ecosystem" },
-  { label: "Resume",                path: "/resume" },
+{ label: "Overview",      path: "/overview" },
+{ label: "Products",      path: "/work" },
+{ label: "Journey",       path: "/experience" },
+{ label: "Innovation",    path: "/innovation" },
+{ label: "Credentials",   path: "/credentials" },
+{ label: "Technology",    path: "/ecosystem" },
+{ label: "Vision",        path: "/vision" },
+{ label: "Resume",        path: "/resume" },
+{ label: "Connect",       path: "/connect" },
 ];
 
 // ─────────────────────────────────────────────
@@ -733,7 +738,7 @@ export default function Navbar() {
 
           {/* Logo */}
           <button className="nav-wordmark" onClick={() => go("/overview")}>
-            Bhagavan
+            B
           </button>
 
           {/* Desktop links */}

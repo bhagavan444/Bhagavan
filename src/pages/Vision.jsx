@@ -33,20 +33,20 @@ function Reveal({ children, className }) {
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 const ENGINEERING_PRINCIPLES = [
-  "Technology should be useful.",
-  "Technology should be understandable.",
-  "Technology should respect people.",
-  "Technology should create opportunity.",
-  "Technology should amplify human capability."
+  "Technology should feel human.",
+  "Complexity should feel simple.",
+  "Intelligence should be useful.",
+  "Products should create impact.",
+  "Potential should have no limits."
 ];
 
 const THE_ROAD_AHEAD = [
-  "Student",
-  "Developer",
-  "Engineer",
-  "AI Builder",
-  "Systems Thinker",
-  "Future Founder"
+  "Learn",
+  "Build",
+  "Improve",
+  "Innovate",
+  "Lead",
+  "Create Impact"
 ];
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
@@ -62,39 +62,46 @@ export default function Vision() {
           SECTION 1 — HERO
       ══════════════════════════════════════════════════════ */}
       <section className="vis-hero" aria-label="Vision Hero">
-        <m.h1 
-          className="vis-hero-headline"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.1, ease: EASE }}
-        >
-          Engineering Human Potential.
-        </m.h1>
-        <m.p 
-          className="vis-hero-sub"
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.1, delay: 0.2, ease: EASE }}
-        >
-          I build intelligent systems that help people understand their skills, opportunities, and future possibilities.
-        </m.p>
-      </section>
+  <m.h1
+    className="vis-hero-headline"
+    initial={{ opacity: 0, y: 40 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1.1, ease: EASE }}
+  >
+    Engineering Human Potential.
+  </m.h1>
+
+  <m.p
+    className="vis-hero-sub"
+    initial={{ opacity: 0, y: 24 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1.1, delay: 0.2, ease: EASE }}
+  >
+    Building intelligent systems that help people understand themselves,
+    navigate complexity, and realize more of what they are capable of
+    becoming.
+  </m.p>
+</section>
 
       {/* ══════════════════════════════════════════════════════
           SECTION 2 — THE OBSERVATION
       ══════════════════════════════════════════════════════ */}
       <section className="vis-observation">
-        <div className="vis-constrain">
-          <Reveal className="vis-editorial-stack">
-            <m.h2 className="vis-editorial-large" variants={fadeUp}>
-              Technology has become very good at managing information.
-            </m.h2>
-            <m.h2 className="vis-editorial-large vis-text-muted" variants={fadeUp}>
-              People still struggle to understand themselves.
-            </m.h2>
-          </Reveal>
-        </div>
-      </section>
+  <div className="vis-constrain">
+    <Reveal className="vis-editorial-stack">
+      <m.h2 className="vis-editorial-large" variants={fadeUp}>
+        We have more information than ever before.
+      </m.h2>
+
+      <m.h2
+        className="vis-editorial-large vis-text-muted"
+        variants={fadeUp}
+      >
+        Understanding remains the real challenge.
+      </m.h2>
+    </Reveal>
+  </div>
+</section>
 
       {/* ══════════════════════════════════════════════════════
           SECTION 3 — THE OPPORTUNITY
@@ -107,10 +114,10 @@ export default function Vision() {
               Intelligence as Guidance.
             </m.h2>
             <m.p className="vis-body" variants={fadeUp}>
-              Artificial intelligence presents a fundamental shift in how we interact with software. It allows us to move from systems that merely store and retrieve data, to systems that understand context.
+              Artificial intelligence represents more than a technological shift. It creates the possibility of software that can understand context, recognize patterns, and transform information into meaningful insight. The focus moves beyond storing knowledge toward helping people make better use of it.
             </m.p>
             <m.p className="vis-body" variants={fadeUp}>
-              This means AI can be directed to help people with learning, career growth, skill development, and decision making. It can provide personalized, contextual guidance at scale—not by replacing human judgment, but by providing the clarity needed to exercise it better.
+             Applied thoughtfully, intelligence can help people learn faster, navigate complexity, identify opportunities, and make more informed decisions. Not by replacing human judgment, but by providing the clarity, context, and guidance needed to exercise it with greater confidence.
             </m.p>
           </Reveal>
         </div>
@@ -123,15 +130,31 @@ export default function Vision() {
         <div className="vis-constrain vis-constrain--reading">
           <Reveal>
             <m.span className="vis-eyebrow" variants={fadeUp}>The Journey</m.span>
-            <m.h2 className="vis-section-headline" variants={fadeUp}>
-              Why I Build.
-            </m.h2>
-            <m.p className="vis-body" variants={fadeUp}>
-              My engineering journey—spanning internships in software development, full stack engineering, and machine learning—has always been grounded in solving practical problems.
-            </m.p>
-            <m.p className="vis-body" variants={fadeUp}>
-              Whether I was building a resume analysis tool to help students navigate ATS systems, or developing models to predict outcomes from complex datasets, the recurring theme was using code to create clarity. Projects like CareerOS emerged naturally from this intersection: applying machine learning to the deeply human problem of navigating a career.
-            </m.p>
+            <Reveal>
+  <m.span className="vis-eyebrow" variants={fadeUp}>
+  
+  </m.span>
+
+<m.h2 className="vis-section-headline" variants={fadeUp}>
+Why I Build.
+</m.h2>
+
+<m.p className="vis-body" variants={fadeUp}>
+Every project began with a simple observation: people often face important
+decisions without the clarity they need to move forward confidently.
+Whether the challenge involves learning, careers, or personal growth, the
+gap is rarely information—it is understanding.
+</m.p>
+
+<m.p className="vis-body" variants={fadeUp}>
+Building software became a way to bridge that gap. Through artificial
+intelligence, intelligent systems, and product engineering, the goal has
+remained consistent: transform complexity into clarity and create tools
+that help people learn, make better decisions, and unlock new
+opportunities. CareerOS emerged from this vision, but the mission extends
+far beyond any single product.
+</m.p> </Reveal>
+
           </Reveal>
         </div>
       </section>
@@ -143,24 +166,35 @@ export default function Vision() {
         <div className="vis-constrain center-align">
           <Reveal>
             <m.h2 className="vis-careeros-headline" variants={fadeUp}>
-              CareerOS.
-            </m.h2>
-            <m.p className="vis-careeros-sub" variants={fadeUp}>
-              A long-term engineering project.
-            </m.p>
-          </Reveal>
-        </div>
-        
-        <div className="vis-constrain vis-constrain--reading">
-          <Reveal>
-            <m.p className="vis-body" variants={fadeUp}>
-              CareerOS is not a company. It is not a startup. It is not a finished product.
-            </m.p>
-            <m.p className="vis-body" variants={fadeUp}>
-              It is a continuous research direction and engineering initiative exploring how AI can help people navigate careers and opportunities. It serves as the foundation where I apply my learning in full stack development, database architecture, and machine learning models to build systems that actually help people understand their potential.
-            </m.p>
-          </Reveal>
-        </div>
+CareerOS.
+</m.h2>
+
+<m.p className="vis-careeros-sub" variants={fadeUp}>
+An Intelligence Platform For Human Growth.
+</m.p> </Reveal>
+
+</div>
+
+<div className="vis-constrain vis-constrain--reading">
+  <Reveal>
+    <m.p className="vis-body" variants={fadeUp}>
+      CareerOS began with a simple question: what if technology could do more
+      than store information? What if it could help people better understand
+      their strengths, opportunities, and future possibilities?
+    </m.p>
+<m.p className="vis-body" variants={fadeUp}>
+  Built at the intersection of artificial intelligence, software
+  engineering, and career development, CareerOS is an ongoing effort to
+  transform complex career data into meaningful insight. It represents a
+  vision for technology that helps people learn, grow, make better
+  decisions, and unlock their full potential.
+</m.p>
+
+
+  </Reveal>
+</div>
+
+          
       </section>
 
       {/* ══════════════════════════════════════════════════════

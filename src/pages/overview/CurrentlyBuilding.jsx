@@ -3,11 +3,23 @@ import { m } from 'framer-motion';
 
 export default function CurrentlyBuilding() {
   const items = [
-    { title: "CareerOS", desc: "Flagship ecosystem scaling to production." },
-    { title: "AI Career Intelligence", desc: "Developing specialized agents for deep semantic analysis of professional history." },
-    { title: "Multi-Agent Systems", desc: "Architecting collaborative LLM networks to automate complex recruitment workflows." },
-    { title: "Next Gen Resume Intelligence", desc: "Building the next iteration of ATS-bypassing resume generation." }
-  ];
+  {
+    title: "CareerOS",
+    desc: "Building the future of career intelligence through AI-powered insights, assessment systems, and personalized growth experiences."
+  },
+  {
+    title: "Human Potential",
+    desc: "Exploring how technology can help people understand their strengths, identify opportunities, and unlock their full potential."
+  },
+  {
+    title: "Intelligent Agents",
+    desc: "Designing specialized AI systems that transform complex career data into clear, actionable guidance."
+  },
+  {
+    title: "Career Intelligence Platform",
+    desc: "Creating a unified ecosystem where assessment, learning, growth, and opportunity converge into a single experience."
+  }
+];
 
   return (
     <div style={{ padding: '48px', height: '100%', background: '#fbfbfd', display: 'flex', flexDirection: 'column' }}>
