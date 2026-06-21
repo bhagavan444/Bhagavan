@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useCallback, useMemo } from "react"
 import { FileText } from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { m, AnimatePresence } from "framer-motion";
+import logoImg from "../assets/logo.png";
 
 // ─────────────────────────────────────────────
 // NAVIGATION ARCHITECTURE
@@ -737,8 +738,8 @@ export default function Navbar() {
         <div className="nav-inner">
 
           {/* Logo */}
-          <button className="nav-wordmark" onClick={() => go("/overview")}>
-            B
+          <button className="nav-wordmark" onClick={() => go("/overview")} style={{ display: 'flex', alignItems: 'center' }}>
+            <img src={logoImg} alt="Logo" style={{ height: '28px', width: '28px', borderRadius: '6px' }} />
           </button>
 
           {/* Desktop links */}

@@ -46,18 +46,17 @@ export default function Overview() {
           {/* Eyebrow */}
           <m.p className="phi-eyebrow" variants={fadeUp}>
             <span className="phi-eyebrow-dot" />
-            • AI • SOFTWARE • HUMAN POTENTIAL
+            • AI • SOFTWARE • PRODUCT ENGINEERING
           </m.p>
 
           {/* Headline — the brand statement */}
           <m.h1 className="phi-headline" variants={fadeUp}>
-            Engineering<br />Human Potential.
+            Building<br />Intelligent Futures.
           </m.h1>
 
           {/* Body — one sentence, clear outcome */}
           <m.p className="phi-body" variants={fadeUp}>
-           I build intelligent products that combine artificial intelligence, software engineering, and thoughtful design to transform complexity into opportunity and ideas into impact.
-
+           I build AI-powered products, full-stack systems, and intelligent experiences that transform complex problems into practical solutions. From CareerOS to production-ready applications, I focus on creating technology with measurable impact.
           </m.p>
 
           {/* Signature — philosophical bridge */}
@@ -69,11 +68,11 @@ export default function Overview() {
           <m.div className="phi-meta" variants={fadeUp}>
             <span className="phi-meta-primary">CareerOS Creator</span>
             <span className="phi-meta-sep">/</span>
-            <span>5+ AI Products Shipped</span>
+            <span>5+ AI Products Built</span>
             <span className="phi-meta-sep">/</span>
             <span>4 Internships</span>
             <span className="phi-meta-sep">/</span>
-            <span>AI &amp; Full-Stack Systems</span>
+            <span>AI &amp; Intelligent Systems Engineer | Full Stack Developer</span>
           </m.div>
 
           {/* CTAs */}
