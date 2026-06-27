@@ -117,10 +117,15 @@ export default function Overview() {
             <m.span className="headline-line" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.5, ease: appleEase }}>Futures.</m.span>
           </m.h1>
 
-          {/* Body */}
-          <m.p className="phi-body" variants={fadeUp} style={{ opacity: elementsOpacity }}>
-           I build AI-powered products, full-stack systems, and intelligent experiences that transform complex problems into practical solutions. From CareerOS to production-ready applications, I focus on creating technology with measurable impact.
-          </m.p>
+          {/* Identity & Body Stack */}
+          <m.div className="phi-identity-stack" variants={fadeUp} style={{ opacity: elementsOpacity }}>
+            <span className="phi-identity-title">AI Engineer</span>
+            <p className="phi-identity-body">
+              Building AI products,<br/>
+              software systems,<br/>
+              and digital experiences.
+            </p>
+          </m.div>
 
           {/* Premium Divider & CareerOS Text */}
           <m.div className="phi-premium-detail" variants={fadeUp} style={{ opacity: elementsOpacity }}>
@@ -170,28 +175,20 @@ export default function Overview() {
 
         {/* RIGHT — PORTRAIT */}
         <m.div
-          className="phi-portrait-col"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2.0, ease: appleEase, delay: 0.1 }}
+          className="portrait-wrapper"
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1] }}
           style={{ y: portraitY, opacity: elementsOpacity }}
         >
-          <div className="phi-portrait-frame">
+          <div className="portrait-glow"></div>
+          <div className="portrait-card">
             <img
               src={profileHeroImg}
               alt="Bhagavan — Full Stack AI Engineer & Product Builder"
-              className="phi-portrait-img"
+              className="portrait-img"
               loading="eager"
             />
-            <m.div
-              className="phi-portrait-card"
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.4, duration: 0.9, ease: appleEase }}
-            >
-              <span className="phi-card-name">G. S. S. Bhagavan</span>
-              <span className="phi-card-role">Full Stack AI Engineer &amp; CareerOS Creator</span>
-            </m.div>
           </div>
         </m.div>
 

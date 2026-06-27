@@ -109,7 +109,7 @@
   display: grid;
   grid-template-columns: 1fr;
   align-items: stretch;
-  min-height: 100vh;
+  min-height: 92vh;
   background: #ffffff;
   padding-top: 52px;
   position: relative;
@@ -118,8 +118,8 @@
 
 @media (min-width: 960px) {
   .phi-hero {
-    grid-template-columns: 60fr 40fr;
-    min-height: 100svh;
+    grid-template-columns: 60fr 40fr; /* Restored approx 40% for portrait column */
+    min-height: 92svh;
   }
 }
 
@@ -134,7 +134,7 @@
 
 @media (min-width: 960px) {
   .phi-content {
-    padding: 0 6vw 0 8vw;
+    padding: 0 40px 0 8vw; /* Reduced empty space between text and portrait */
   }
 }
 
@@ -164,7 +164,7 @@
   letter-spacing: -0.04em;
   line-height: 1.04;
   color: #1d1d1f;
-  margin: 0 0 32px 0;
+  margin: 0 0 16px 0; /* Reduced margin to pair with identity descriptor */
   display: flex;
   flex-direction: column;
 }
@@ -173,14 +173,27 @@
   display: block;
 }
 
-.phi-body {
+.phi-identity-stack {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 32px 0;
+}
+
+.phi-identity-title {
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  color: #1d1d1f;
+  margin-bottom: 12px;
+}
+
+.phi-identity-body {
   font-size: clamp(16px, 1.4vw, 19px);
   font-weight: 400;
   letter-spacing: -0.015em;
   line-height: 1.6;
-  color: #1d1d1f;
-  max-width: 440px;
-  margin: 0 0 16px 0;
+  color: #6B7280;
+  margin: 0;
 }
 
 .phi-premium-detail {
@@ -326,68 +339,105 @@
   color: #86868b;
 }
 
-.phi-portrait-col {
+/* =========================================
+   PREMIUM PORTRAIT CARD
+   ========================================= */
+
+.portrait-wrapper {
   position: relative;
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: center;
-  overflow: hidden;
+  width: 100%;
+  height: 90%;
+  align-self: center;
+  isolation: isolate;
+  padding: 32px;
+}
+
+@media (min-width: 960px) {
+  .portrait-wrapper {
+    width: 110%; /* Increase portrait width by 10% */
+    height: 89%; /* Reduce height by approx 4% more */
+    margin-left: calc(-5% - 25px); /* Move 25px closer to text */
+    margin-top: -45px; /* Move portrait upward by another 15px */
+    padding: 48px 40px 48px 48px; /* Maintain approx 40px right padding */
+  }
 }
 
 @media (max-width: 959px) {
-  .phi-portrait-col {
+  .portrait-wrapper {
     min-height: 60vw;
     max-height: 85vw;
   }
 }
 
-.phi-portrait-frame {
+@media (max-width: 767px) {
+  .portrait-wrapper {
+    max-height: 420px;
+    padding: 32px 24px;
+  }
+}
+
+/* Depth pseudo-element behind the card */
+.portrait-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.45), rgba(240,240,240,0.15));
+  filter: blur(40px);
+  z-index: -2;
+  border-radius: 24px;
+}
+
+/* Ambient glow directly behind the card */
+.portrait-glow {
+  position: absolute;
+  inset: -40px;
+  background: radial-gradient(circle, rgba(240,240,240,0.35), transparent 70%); /* Reduced glow opacity by ~30% */
+  filter: blur(50px);
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.portrait-card {
   position: relative;
   width: 100%;
   height: 100%;
+  border-radius: 24px;
   overflow: hidden;
-  background: #ffffff;
-  border: 1px solid rgba(0,0,0,0.04);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-  padding: 4px;
+  background: #FFFFFF;
+  border: 1px solid rgba(15,23,42,0.05); /* Almost invisible border */
+  box-shadow: 0 24px 60px rgba(15,23,42,0.08), 0 10px 30px rgba(15,23,42,0.04); /* Softer premium shadow */
+  transform: translateY(-4px);
+  animation: float-portrait 8s ease-in-out infinite alternate;
+  transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, box-shadow;
 }
 
-.phi-portrait-img {
+.portrait-card:hover {
+  transform: scale(1.015) translateY(0);
+  box-shadow: 0 32px 80px rgba(15,23,42,0.1), 0 12px 40px rgba(15,23,42,0.06);
+  animation-play-state: paused;
+}
+
+@keyframes float-portrait {
+  0% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(4px);
+  }
+}
+
+.portrait-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 6%;
+  object-position: center 10%;
   display: block;
-  filter: grayscale(6%) contrast(1.03);
-}
-
-.phi-portrait-card {
-  position: absolute;
-  bottom: 24px;
-  left: 24px;
-  background: rgba(255,255,255,0.6);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(255,255,255,0.5);
-  border-radius: 16px;
-  padding: 12px 20px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-}
-
-.phi-card-name {
-  font-size: 13px;
-  font-weight: 600;
-  color: #1d1d1f;
-  margin-bottom: 2px;
-}
-
-.phi-card-role {
-  font-size: 12px;
-  font-weight: 400;
-  color: #6e6e73;
+  transform: scale(1.18); /* Internal image scale increased slightly */
+  transform-origin: center 15%;
 }
 
 /* Dynamic Lighting & Noise Overlay */
